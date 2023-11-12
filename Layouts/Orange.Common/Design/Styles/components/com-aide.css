@@ -1,0 +1,57 @@
+﻿/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-aide {
+  background-color: #EEE;
+}
+.com-aide .nav-section-main {
+  font-size: 14px;
+  padding: 0px 15px;
+  background-color: #404040;
+}
+.com-aide .nav-section-main h1 {
+  font-size: 21px;
+  color: #FFFFFF;
+}
+.com-aide .nav-section-main ul {
+  list-style: none;
+  margin-top: 5px;
+}
+.com-aide .nav-section-main ul li {
+  cursor: pointer;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #808080;
+}
+.com-aide .nav-section-main ul li:hover {
+  color: #FF6600;
+}
+.com-aide .nav-section-main .scrollbar-dynamic {
+  min-height: calc(50vh - 60px) !important;
+  max-height: calc(50vh - 60px) !important;
+}
+.com-aide .nav-section-main.mode-operatoire {
+  background-color: #EEE;
+  color: #000000;
+  min-height: initial !important;
+}
+.com-aide .nav-section-main.mode-operatoire h1 {
+  color: #000000;
+}
+.com-aide .nav-section-main.video {
+  background-color: #EEE;
+  color: #000000;
+}
+.com-aide .nav-section-main.video h1 {
+  color: #000000;
+}
+.com-aide .nav-section-main.didacticiel {
+  min-height: 200px !important;
+}

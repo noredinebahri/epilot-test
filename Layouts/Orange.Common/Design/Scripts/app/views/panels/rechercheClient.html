@@ -1,0 +1,212 @@
+﻿<div ng-controller="rechercheClientController as rc" ng-cloak>
+    <div class="recherche-client-top-button"
+         ng-class="{ 'active' : rc.Panel.Open && (rc.panelCurrent == rc.Panel.Name) }"
+         ng-click="$event.stopPropagation(); rc.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fas fa-search"></span>
+            </div>
+        </div>
+    </div>
+    <div class="com-hierarchie-navigation com-aide com-recherche-client-panel ms-dialogHidden"
+         ng-class="{'open' : rc.Panel.Open,  'close' : !rc.Panel.Open}"
+         ng-if="(rc.panelCurrent == rc.Panel.Name)">
+        <div ng-if="rc.Panel.Open">
+            <div class="nav-section-main">
+                <ul>
+                    <li>
+                        1- Choisissez le type de recherche
+                        
+                        <div class="recherche-client-toggle-view">
+                            <div class="toggle-view-left" ng-class="{ 'active' : rc.isClient }" ng-click="rc.toggleBtn(1)">
+                                Client
+                            </div>
+                            <div class="toggle-view-middle" ng-class="{ 'active' : rc.isActeur }" ng-click="rc.toggleBtn(2)">
+                                Acteur
+                            </div>
+                            <div class="toggle-view-right" ng-class="{ 'active' : rc.isProduit }" ng-click="rc.toggleBtn(3)">
+                                Produit
+                            </div>
+                        </div>
+
+                    </li>
+                    <li ng-if="rc.isClient">
+                        2- Faites votre recherche
+
+                        <input type="text" ng-model="rc.siren"
+                               ng-change="rc.onChange();"
+                               class="form-control form-control-standard"
+                               placeholder="Selectionner un client"
+                               uib-typeahead="item as item.Libelle for item in rc.searchClient($viewValue)"
+                               typeahead-editable="false"
+                               typeahead-on-select="rc.onSelect($item, $model, $label)"
+                               typeahead-min-length="3" required>
+                    </li>
+                    <li ng-if="rc.isActeur && !rc.isVendeur">
+                        2- Faites votre recherche
+
+                        <input type="text" ng-model="rc.selectedActeur"
+                               ng-change="rc.onChangeActeur();"
+                               class="form-control form-control-standard"
+                               placeholder="Selectionner un acteur"
+                               uib-typeahead="item as item.NomActeur for item in rc.searchActeur($viewValue)"
+                               typeahead-editable="false"
+                               typeahead-on-select="rc.onSelectActeur($item, $model, $label)"
+                               typeahead-min-length="3" required>
+                    </li>
+                    <li ng-if="rc.isActeur && rc.isVendeur">
+                        Votre fiche acteur est disponible dans le menu
+                    </li>
+                    <li ng-if="rc.isProduit">
+                        2- Faites votre recherche
+
+                        <input type="text" ng-model="rc.selectedProduit"
+                               ng-change="rc.onChangeProduit();"
+                               class="form-control form-control-standard"
+                               placeholder="Selectionner un produit"
+                               uib-typeahead="item as item.NomProduit for item in rc.searchProduit($viewValue)"
+                               typeahead-editable="false"
+                               typeahead-on-select="rc.onSelectProduit($item, $model, $label)"
+                               typeahead-min-length="3" required>
+                    </li>
+                </ul>
+                <div ng-if="rc.isClient">
+                    <div class="rch-btn-wrapper" style="margin-bottom: 20px;">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openFicheClient()" ng-disabled="!rc.isClientNew">
+                            Fiche Client (HORS CA)
+                        </a>
+                    </div>
+                    <div  class="rch-btn-wrapper">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openCaParc()" ng-disabled="!rc.isCapa">
+                            Fiche Client (CA)
+                        </a>
+                    </div>
+                    
+                    <div class="recherche-client-details" ng-if="rc.siren">
+                        <h4>Détails Client</h4>
+                        <ul>
+                            <li>
+                                <b>AE</b> <span>{{rc.client.CodeAgence}}</span>
+                            </li>
+                            <li ng-if="rc.acteur.CodeDv !== '-1'">
+                                <b>DV</b> <span>{{rc.client.CodeDv}}</span>
+                            </li>
+                            <li ng-if="rc.client.CodeRdv !== '-1'">
+                                <b>RDV</b> <span>{{rc.client.CodeRdv}}</span>
+                            </li>
+                            <li>
+                                <b>Segment client</b> <span>{{rc.client.SegmentClient}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h1 style="color: grey !important">Parc <span style="color: grey !important;font-size: 16px">(source CAP)</span></h1>
+
+                    <div id="recherche-client-parc-not-exist" ng-if="rc.parcNotExist">Données PARC non identifiées</div>
+
+                    <div class="row" style="padding: 20px;padding-bottom: 0px;" ng-if="rc.domaines.length > 0">
+                        <ul class="nav nav-pills col-xs-6">
+                            <li class="recherche-client-domaine-element" ng-class="{active : $first}" ng-repeat="domaine in rc.domaines">
+                                <a class="recherche-client-domaine-result" href="#Tab_{{domaine.Id}}" data-toggle="tab">
+                                    {{domaine.Domaine}}
+                                    <span ng-click="rc.export(domaine.Id)" id="export-button">
+                                        <i class="fas fa-download"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content parc-list clearfix col-xs-6">
+                            <div class="tab-pane" ng-class="{active : $first}"
+                                 id="Tab_{{domaine.Id}}" ng-repeat="domaine in rc.domaines">
+                                <ul style="padding: 0;">
+                                    <li ng-repeat="offre in domaine.Offres">
+                                        <span>{{offre}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h1 style="color: grey !important; margin-top: 0px;" ng-if="rc.siren">Source PMD</h1>
+                    
+                    <div class="btn-action" ng-click="rc.openPmdLink()" ng-if="rc.siren">
+                        <a href="#">
+                            <img src="/_layouts/15/Orange.Common/Design/Images/pmd_link.png" style="width:100px;height: 100px;"/>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="recherche-acteur-result" ng-if="rc.isActeur && rc.selectedActeur">
+                    <div class="rch-btn-wrapper" style="margin-bottom: 10px;">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openFicheActeur()" ng-disabled="!rc.selectedActeur">
+                            Fiche Acteur
+                        </a>
+                    </div>
+                    
+                    <div class="rch-btn-wrapper" style="margin-bottom: 10px;">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openBenchClient()" ng-disabled="!rc.selectedActeur">
+                            Bench Client
+                        </a>
+                    </div>
+                    
+                    <div class="rch-btn-wrapper">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openBenchVendeur()" ng-disabled="!rc.selectedActeur">
+                            Bench Vendeur
+                        </a>
+                    </div>
+
+                    <h4>Détails vendeur</h4>
+                    <ul>
+                        <li>
+                            <b>AE</b> <span>{{rc.acteur.CodeAgence}}</span>
+                        </li>
+                        <li ng-if="rc.acteur.NomDv !== '-1'">
+                            <b>DV</b> <span>{{rc.acteur.NomDv}}</span>
+                        </li>
+                        <li ng-if="rc.acteur.NomRdv !== '-1'">
+                            <b>RDV</b> <span>{{rc.acteur.NomRdv}}</span>
+                        </li>
+                        <li>
+                            <b>FONCTION</b> <span>{{rc.acteur.CodeFonction}}</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="recherche-produit-result" ng-if="rc.isProduit && rc.selectedProduit">
+                    <div class="rch-btn-wrapper">
+                        <a class="btn btn-orange-default" href="#" ng-click="rc.openFicheProduit()" ng-disabled="!rc.selectedProduit">
+                            Fiche Produit
+                        </a>
+                    </div>  
+                    <h4>Détails produit</h4>
+                         <ul>
+                            <li>
+                                <b>Domaine CA</b> <span>{{rc.produit.DomaineCa}}</span>
+                            </li>
+                            <li>
+                                <b>Sous Domaine CA</b> <span>{{rc.produit.SousDomaineCa}}</span>
+                            </li>
+                            <li>
+                                <b>RC/CB</b> <span>{{rc.produit.RcCb}}</span>
+                            </li>
+                            <li>
+                                <b>Domaine</b> <span>{{rc.produit.Domaine}}</span>
+                            </li>
+                            <li>
+                                <b>Sous objectif</b> <span>{{rc.produit.SousObjectif}}</span>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); rc.Panel.Display()">
+            <div ng-if="rc.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="rc.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+</div>

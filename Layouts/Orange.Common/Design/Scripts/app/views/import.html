@@ -1,0 +1,111 @@
+﻿<form name="importForm" ng-submit="vm.onSubmit(importForm)">
+    <div class="modal-header">
+        <h4 class="modal-title" ng-bind="vm.title"></h4>
+        <a href="#" class="modal-close" ng-click="$close()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="modal-body popup-import">
+        <div class="col-xs-12 section-import">
+            <div class="col-md-2" style="text-align:right">
+                <span>Template : </span>
+            </div>
+            <div class="col-md-3 com-export" ng-show="vm.getEmptyExcelTemplate">
+                <a id="fileOutput" target="_blank" ng-href="{{vm.getEmptyExcelTemplate}}">
+                    <div><i class="fa fa-download" aria-hidden="true"></i> Exporter le template </div>
+                </a>
+            </div>
+            <div class="col-md-1" ng-show="vm.getPrefilledExcelTemplate && vm.getEmptyExcelTemplate">
+                <span> ou </span>
+            </div>
+            <div class="col-md-4 com-export" ng-show="vm.getPrefilledExcelTemplate">
+                <a id="fileOutput" target="_blank" ng-href="{{vm.getPrefilledExcelTemplate}}">
+                    <div><i class="fa fa-download" aria-hidden="true"></i> Exporter le template pré-renseigné </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12" style="height:20px"></div>
+            <div class="col-xs-2" style="text-align:right">
+                <span>Import du fichier : </span>
+            </div>
+            <div class="col-xs-8 file-selector">
+                <input type="text" id="selectedfile"  class="col-xs-9" disabled="disabled" placeholder="Selectionner un fichier" />
+                <a href="#" class="btn btn-orange-default col-xs-3" onclick="document.getElementById('hiddenFileUpload').click()">
+                    Parcourir
+                    <input class="hidden" id="hiddenFileUpload"
+                            accept=".xlsx" ngf-select="vm.uploadFile($file, $invalidFiles)" type="file" />
+                </a>
+            </div>
+            <div class="cb"></div>
+        </div>
+
+        <div class="row section-resultats">
+            <div class="col-xs-12 " ng-show="vm.importReport">
+                <div class="col-xs-3">
+                    <div class="count total">
+                        <span ng-bind="vm.importReport.ProcessedLinesCount"></span> lignes totales
+                    </div>
+
+                </div>
+                <div class="col-xs-3 ">
+                    <div class="count valid">
+                        <span ng-bind="vm.importReport.ValidLines.length"></span> lignes valides
+                    </div>
+
+                </div>
+                <div class="col-xs-3 ">
+                    <div class="count erreur">
+                        <span ng-bind="vm.importReport.ErrorLinesCount"></span> erreurs
+                    </div>
+                </div>
+
+                <div class="col-xs-3" ng-show="vm.importReport.ErrorLinesCount > 0" style="padding-top: 15px; padding-left: 40px;">
+                    <a class="btn btn-grey-default"
+                       ng-csv="vm.importReport.ErrorLines" filename="exportResult.csv" csv-header=" ['Ligne', 'Erreur']" field-separator=";" decimal-separator=".">
+                        <i class="fa fa-download" aria-hidden="true" /> Export les erreurs
+                    </a>
+                </div>
+            </div>
+            <div class="cb"></div>
+            <div class="col-xs-12 section-errors" ng-show="vm.importReport.ErrorLinesCount > 0">
+                <div>
+                    <h4>Liste des erreurs</h4>
+                </div>
+                <div class="scrollbar-dynamic actions-results" data-jquery-scrollbar="jQueryScrollbarOptions" style="max-height:350px">
+                    <table class="table">
+                        <tr>
+                            <th>Ligne</th>
+                            <th>Colonne</th>
+                            <th>Message</th>
+                        </tr>
+                        <tr ng-repeat="result in vm.importReport.ErrorLines | limitTo: 40">
+                            <td ng-bind="result.LineNumber"></td>
+                            <td ng-bind="result.Colonne"></td>
+                            <td ng-bind="result.Message"></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" ng-show="vm.importReport && vm.importReport.ErrorLines.length" style="padding-left:30px; color:red">
+            <div>
+                Impossible d'enregistrer tant qu'il y a des erreurs dans le fichier d'import.
+            </div>
+        </div>
+        <div class="row reportblocs" ng-show="vm.error" style="padding-left:30px; color:red">
+            <div ng-bind="vm.error"></div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-orange-default" ng-click="vm.importReport && vm.importReport.ValidLines.length && !vm.importReport.ErrorLines.length && vm.saveImportData()" href="#"
+           ng-disabled="!vm.importReport || !vm.importReport.ValidLines.length || vm.importReport.ErrorLines.length">
+            <i class="fa fa-save" aria-hidden="true"></i> Enregistrer
+        </a>
+
+        <a class="btn btn-grey-default" href="#" ng-click="$close()">
+            <i class="fa fa-undo" aria-hidden="true"></i> Annuler
+        </a>
+    </div>
+</form>

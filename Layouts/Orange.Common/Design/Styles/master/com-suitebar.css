@@ -1,0 +1,123 @@
+﻿/************************************************************************************************************************************************
+                              SuiteBar - Barre haut de page
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+#suiteBar {
+  height: 60px;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #000000;
+  /*  ZONE - LEFT  */
+  /*  ZONE - RIGHT  */
+}
+#suiteBar #suiteBarLeft {
+  background-color: #000000;
+}
+#suiteBar #suiteBarLeft .ms-tableRow {
+  /*  Titre du module  */
+  /*  Barre séparation  */
+  /*  Titre de la page  */
+  /*Titre complémentaire*/
+}
+#suiteBar #suiteBarLeft .ms-tableRow > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title {
+  color: #FFFFFF;
+  padding-left: 20px;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title span {
+  line-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-size: 22px;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title span.page-title {
+  color: #FF6600;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title span.page-title span,
+#suiteBar #suiteBarLeft .ms-tableRow .site-title span.page-title a {
+  display: none;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title span text {
+  margin-bottom: -5px;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title #page-title-seleted-user-name {
+  color: #AAA;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .site-title #page-title-seleted-user-agency {
+  font-size: 18px;
+  color: #AAA;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .verticalLine {
+  width: 1px;
+  background-color: #FFFFFF;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .page-title {
+  color: #FFFFFF;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .page-title span {
+  margin-left: 15px;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 60px;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .additionalPageTitle {
+  text-align: right;
+  font-size: 1.2em;
+  padding-right: 10px;
+  background-color: #000000;
+}
+#suiteBar #suiteBarLeft .ms-tableRow .additionalPageTitle a {
+  color: #FF6600;
+}
+#suiteBar #suiteBarRight {
+  background-color: #000000;
+  vertical-align: middle;
+  /*  MENU - NOM  */
+  /*  MENU - SITE ACTION  */
+  /*  PHOTO UTILISATEUR  */
+}
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-welcome-root > a.ms-core-menu-root,
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-signInLink {
+  color: #FFFFFF;
+  text-decoration: none;
+  height: 30px;
+  line-height: 25px;
+}
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-welcome-hover > a.ms-core-menu-root,
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-signInLink:hover {
+  color: #555555;
+  text-decoration: none;
+}
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-core-menu-root {
+  font-size: 18px;
+}
+#suiteBar #suiteBarRight #welcomeMenuBox .ms-core-menu-label {
+  font-size: 15px;
+}
+#suiteBar #suiteBarRight #suiteBarButtons {
+  vertical-align: middle;
+}
+#suiteBar #suiteBarRight #suiteBarButtons .ms-core-menu-label {
+  font-size: 15px;
+}
+#suiteBar #suiteBarRight #suiteBarButtons .ms-siteactions-root > span > a.ms-core-menu-root {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  padding: 8px 7px 6px 8px;
+}
+#suiteBar #suiteBarRight .userPhoto img {
+  display: none;
+}

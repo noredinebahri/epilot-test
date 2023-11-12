@@ -1,0 +1,296 @@
+﻿/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-bloc-note {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #F2F2F2;
+  background-color: #FFFFFF;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  z-index: 50;
+  box-shadow: 1px 1px 9px #333;
+}
+.com-bloc-note .sirtaki {
+  background-image: url('../../Images/dancing.png');
+}
+.com-bloc-note.open {
+  width: 1100px;
+  transition: width 0.2s;
+}
+.com-bloc-note.close {
+  width: 20px;
+  opacity: 1;
+  transition: width 0.2s;
+}
+.com-bloc-note.close .nav-section.nav-section-search {
+  padding: 0;
+}
+.com-bloc-note .nav-section {
+  position: relative;
+  /* SECTION - HEADER */
+  /* SECTION - MAIN */
+}
+.com-bloc-note .nav-section .form-control {
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+.com-bloc-note .nav-section.nav-section-header {
+  height: 60px;
+  line-height: 60px;
+  background: #FF6600;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+.com-bloc-note .nav-section.nav-section-header .txtContainer {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 10px;
+  float: left;
+  font-weight: bold;
+}
+.com-bloc-note .nav-section.nav-section-main {
+  /* PANEL - LEFT */
+  /* PANEL - RIGHT */
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left {
+  height: calc(100vh - 125px);
+  background-color: #404040;
+  padding-top: 20px;
+  font-size: 18px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul {
+  margin-left: 0;
+  list-style: none;
+  padding: 0;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li #removeUser {
+  display: none;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li.enabled {
+  cursor: pointer;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li.enabled.active,
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li.enabled:hover {
+  color: #FF6600;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li.enabled.active #removeUser,
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li.enabled:hover #removeUser {
+  color: #FFFFFF;
+  display: inline;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul li md-autocomplete {
+  color: #000000;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul > li ul {
+  padding-top: 5px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-left ul > li ul > li {
+  padding-left: 25px;
+  font-size: 14px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right {
+  color: #000;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-titre {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-titre .titre {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 34px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-titre .btn-addnew.active {
+  display: none;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu {
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  font-size: 15px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .titre {
+  font-size: 16px;
+  font-weight: bold;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .md-errors-spacer {
+  display: none;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu input,
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu textarea {
+  border: 1px solid #ababab;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .save {
+  font-size: 10px;
+  float: right;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .save.disabled-note {
+  color: #CCCCCC;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .save.disabled-note svg {
+  cursor: no-drop;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .cancel {
+  font-size: 10px;
+  float: right;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .cancel.disabled-note {
+  color: #CCCCCC;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-add-new .contenu .cancel.disabled-note svg {
+  cursor: no-drop;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat {
+  color: #000000;
+  padding: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .recherche {
+  padding: 0px 5px;
+  position: relative;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .recherche svg {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  font-size: 18px;
+  opacity: 0.3;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .recherche input {
+  padding-left: 30px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note {
+  border-radius: 4px;
+  -moz-border-radius: 0px 10px 10px;
+  -webkit-border-radius: 0px 10px 10px;
+  margin: 5px;
+  margin-top: 20px;
+  border: 1px solid #C4C4C4;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #ecebeb;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note.non-lu {
+  background-color: #FFE4CC;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #555555;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .dateModification {
+  font-weight: lighter;
+  color: #999;
+  margin-left: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .button-container {
+  text-align: right;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .button-container .button-note {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .button-container .button-note svg {
+  cursor: pointer;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .button-container .button-note.disabled-button-note {
+  color: #CCCCCC;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .entete-note .button-container .button-note.disabled-button-note svg {
+  cursor: no-drop;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .contenu-note {
+  font-size: 15px;
+  color: #555555;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.3;
+  margin-top: 5px;
+  padding-left: 19px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .contenu-note .titre {
+  font-weight: bold;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .contenu-note .bouton-modification-note {
+  text-align: right;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .nombre-commentaire-note {
+  padding: 5px 20px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note {
+  padding: 10px 20px 2px 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px 0px 5px 5px;
+  -moz-border-radius: 5px 0px 5px 5px;
+  -webkit-border-radius: 5px 0px 5px 5px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note {
+  font-size: 13px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note.non-lu {
+  background-color: #FFE4CC;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note #delete {
+  margin-left: 5px;
+  display: none;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note:hover #delete {
+  display: inline;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note .auteur-commentaire-note {
+  color: #555;
+  width: 100%;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note .auteur-commentaire-note .dateModification {
+  font-weight: lighter;
+  color: #999;
+  margin-left: 10px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .commentaires-note .commentaire-note .texte-commentaire-note {
+  margin-bottom: 8px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .ajout-commentaire-note {
+  padding: 5px 20px;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .section-resultat .mes-notes .ma-note .ajout-commentaire-note input {
+  background-color: #f5f5f5;
+}
+.com-bloc-note .nav-section.nav-section-main .panel-right .scrollbar-dynamic {
+  height: calc(100vh - 125px);
+}
+.com-bloc-note input.ng-invalid-required,
+.com-bloc-note textarea.ng-invalid-required {
+  border: 1px solid #f00;
+}
+.com-bloc-note input.ng-invalid-required.ng-pristine,
+.com-bloc-note textarea.ng-invalid-required.ng-pristine {
+  border: none;
+}

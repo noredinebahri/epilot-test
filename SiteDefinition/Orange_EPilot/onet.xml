@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Title="Orange_EPilot" Revision="3" ListDir="" xmlns:ows="Microsoft SharePoint" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <NavBars>
+       <NavBar Name="SharePoint Top Navbar" ID="1002"></NavBar>
+  </NavBars>
+  <Configurations>
+    <Configuration ID="0" Name="Orange_EPilot">
+      <Lists/>
+      <SiteFeatures>
+      </SiteFeatures>
+      <WebFeatures>
+        <Feature ID="94c94ca6-b32f-4da9-a9e3-1f3d343d7ecb"></Feature>
+        <Feature ID="1e69be9a-e5e6-4004-a1c8-41a559a4269a"></Feature>
+      </WebFeatures>
+      <Modules>
+        <Module Name="DefaultBlank" />
+      </Modules>
+    </Configuration>
+    <Configuration ID="1" Name="Orange_EPilot">
+      <Lists/>
+      <SiteFeatures>
+      </SiteFeatures>
+      <WebFeatures>
+        <Feature ID="94c94ca6-b32f-4da9-a9e3-1f3d343d7ecb"></Feature>
+        <Feature ID="1e69be9a-e5e6-4004-a1c8-41a559a4269a"></Feature>
+      </WebFeatures>
+      <Modules>
+        <Module Name="DefaultBlank" />
+      </Modules>
+    </Configuration>
+  </Configurations>
+  <Modules>
+    <Module Name="DefaultBlank" Url="" Path="">
+      <File Url="default.aspx">
+      </File>
+    </Module>
+  </Modules>
+</Project>

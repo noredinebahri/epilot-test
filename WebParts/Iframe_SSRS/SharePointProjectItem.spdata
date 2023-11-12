@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="Iframe_SSRSUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Iframe_SSRS\" Type="ElementManifest" />
+    <ProjectItemFile Source="Iframe_SSRS.webpart" Target="Iframe_SSRS\" Type="ElementFile" />
+    <ProjectItemFile Source="Iframe_SSRSUserControl.ascx" Target="CONTROLTEMPLATES\Orange.EPilot.WebParts\Iframe_SSRS\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Orange.EPilot.WebParts.Iframe_SSRS" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

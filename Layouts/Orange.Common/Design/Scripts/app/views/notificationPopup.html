@@ -1,0 +1,27 @@
+﻿<div>
+    <div class="modal-header" ng-if="vm.titleToShow" style="background-color: #f60 !important;">
+        <h4 class="modal-title" ng-bind="vm.titleToShow"></h4>
+        <a href="#" class="modal-close" ng-click="$close()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12"  style="font-size: 24px;">
+                <i class="fa fa-bell faa-ring animated fa-5x" style="display: inline-block;width: 100%;color: lightgray;"></i>
+            </div>
+            <div class="col-xs-12">
+                <div ng-if="vm.textToShow" ng-bind-html="vm.textToShow" style="text-align: center;font-size: 22px;margin-top: 30px;"></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group" style="text-align: center;font-size: 18px;margin-top: 30px;">
+                    <input type="checkbox"
+                           ng-click="vm.doNotDisplay()"
+                           name="checkbox">
+                    <label style="font-weight: normal !important;">Ne plus afficher ce message.</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

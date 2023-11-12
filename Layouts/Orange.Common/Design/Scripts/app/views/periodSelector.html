@@ -1,0 +1,47 @@
+﻿<div class="btn-group fl common-content com-top-selector com-top-selector-period">
+    <button type="button" class="dropdown-toggle baseddt"
+            uib-popover-template="'myPopoverTemplate.html'"
+            data-toggle="popover"
+            popover-title="Sélectionner une période"
+            popover-placement="bottom-left">
+        <div>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div class="periodName">{{Periode.Current.Period}}</div>
+    </button>
+    <script type="text/ng-template" id="myPopoverTemplate.html">
+        <div class="template">
+            <div class="btn-group fl common-content common-select-period">
+                <button type="button" class="dropdown-toggle text-select-period" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{Periode.CurrentYear}} 
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="year in Periode.AllYears | orderBy:'-'">
+                        <a href="#" class="selector-year" ng-click="Periode.Selecteur.SelectYear(year, false)">{{year}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group fl common-content common-select-period">
+                <button type="button" class="dropdown-toggle text-select-period" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{Periode.Selecteur.TempPeriodeShortValue}} 
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="period in Periode.Selecteur.PeriodesFiltreParAnnee track by period.Id">
+                        <a href="#" class="selector-period" ng-click="Periode.Selecteur.SelectPeriode(period)">{{period.shortPeriod}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group fl common-content padding0">
+                <div class="btn-action padding0" ng-click="Periode.Selecteur.Save()">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p>Valider</p>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </script>
+    <div id="currentIdPeriod" style="font-size:1px; visibility:hidden"> {{Periode.Current.Id}}</div>
+</div>

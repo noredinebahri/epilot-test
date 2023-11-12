@@ -1,0 +1,434 @@
+﻿/************************************************************************************************************************************************
+                                                          CSS - STYLE GLOBAUX DE L'APPLICATION
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+/************************************************************************************************************************************************
+                                                                      Header
+************************************************************************************************************************************************/
+#DeltaPlaceHolderPageTitleInTitleArea {
+  display: none;
+}
+/************************************************************************************************************************************************
+                                                                      Top navigation
+************************************************************************************************************************************************/
+body {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h6 {
+  font-weight: 700;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 23px;
+}
+a:hover {
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
+.padding0 {
+  padding: 0;
+}
+.padding20 {
+  padding: 20px;
+}
+.w-50 {
+  width: 50px;
+}
+.cb,
+.clear {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.padding0 {
+  padding: 0;
+}
+/************************************************************************************************************************************************
+                                                                      Background Colors
+************************************************************************************************************************************************/
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-blue {
+  background-color: #5cbbd9;
+}
+.bg-yellow {
+  background-color: #fed332;
+}
+.bg-green {
+  background-color: #5db78f;
+}
+.bg-purple {
+  background-color: #ad92b6;
+}
+.bg-orange {
+  background-color: #ff7900;
+}
+.bg-orange-dark {
+  background-color: #e8863d;
+}
+.bg-black {
+  background-color: #000000;
+}
+.bg-grey {
+  background-color: #f3f3f1;
+}
+.bg-grey-dark {
+  background-color: #737470;
+}
+.bg-grey-darker {
+  background-color: #404040;
+}
+/************************************************************************************************************************************************
+                                                                      Background Colors
+************************************************************************************************************************************************/
+.txt-white {
+  color: #ffffff;
+}
+.txt-blue {
+  color: #5cbbd9;
+}
+.txt-yellow {
+  color: #fed332;
+}
+.txt-green {
+  color: #5db78f;
+}
+.txt-purple {
+  color: #ad92b6;
+}
+.txt-orange {
+  color: #ff7900;
+}
+.txt-orange-dark {
+  color: #e8863d;
+}
+.txt-grey {
+  color: #f3f3f1;
+}
+.txt-grey-dark {
+  color: #737470;
+}
+.orange {
+  color: #FF6600;
+}
+/************************************************************************************************************************************************
+                                                                      Textbox
+************************************************************************************************************************************************/
+.form-control {
+  width: 100%;
+  font-size: 12px !important;
+  height: 30px !important;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+textarea.form-control {
+  height: auto !important;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #eee !important;
+  opacity: 1;
+}
+.form-control:focus {
+  border-left: 1px solid #f3f3f1;
+  border-right: 1px solid #f3f3f1;
+  border-top: 1px solid #f3f3f1;
+  border-bottom: 1px solid #000000;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control-standard {
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+}
+.form-control-standard:focus {
+  border: 1px solid #000000;
+}
+.form-button {
+  padding: 6px 0px;
+}
+/************************************************************************************************************************************************
+                                                                      Buttons
+************************************************************************************************************************************************/
+button {
+  min-width: 0;
+}
+a.btn-primary,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active,
+a.btn-primary:active:hover,
+a.btn-primary:active:focus {
+  background-color: #ff7900;
+  background-image: none;
+  /* In order to override bootstrap styles */
+  border-color: #ff7900;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0px;
+  padding: 1px 12px;
+}
+a.btn-grey-dark,
+a.btn-grey-dark:hover,
+a.btn-grey-dark:focus,
+a.btn-grey-dark:active,
+a.btn-grey-dark:active:hover,
+a.btn-grey-dark:active:focus {
+  background-color: #737470;
+  border-color: #737470;
+  font-weight: bold;
+  border-radius: 0px;
+  padding: 0px 5px;
+  min-width: 125px;
+  line-height: 2;
+  color: #fff;
+}
+a.btn-orange-default,
+a.btn-orange-default:hover,
+a.btn-orange-default:focus,
+a.btn-orange-default:active,
+a.btn-orange-default:active:hover,
+a.btn-orange-default:active:focus {
+  background-color: #ff7900;
+  border: 2px solid #ff7900;
+  font-weight: bold;
+  border-radius: 0px;
+  padding: 0px 5px;
+  min-width: 133px;
+  line-height: 2;
+  color: #fff;
+}
+a.btn-grey-default,
+a.btn-grey-default:hover,
+a.btn-grey-default:focus,
+a.btn-grey-default:active,
+a.btn-grey-default:active:hover,
+a.btn-grey-default:active:focus {
+  border: 2px solid #000;
+  font-weight: bold;
+  border-radius: 0px;
+  padding: 0px 5px;
+  min-width: 133px;
+  line-height: 2;
+  color: #000;
+}
+.table {
+  margin-bottom: 5px;
+}
+.add-button {
+  float: right;
+}
+.text-right {
+  text-align: right;
+}
+a.btn-secondary,
+a.btn-secondary:hover,
+a.btn-secondary:focus,
+a.btn-secondary:active,
+a.btn-secondary:active:hover,
+a.btn-secondary:active:focus {
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0px;
+  padding: 1px 12px;
+  color: black !important;
+}
+/************************************************************************************************************************************************
+                                                                      Header
+************************************************************************************************************************************************/
+.header {
+  background: #000000;
+  border-top: 1px solid #fff;
+  height: 50px;
+}
+.dropdown > a:before {
+  font-family: 'FontAwesome';
+  content: "\f0d7";
+  position: absolute;
+  left: auto;
+  top: 10px;
+  right: 1px;
+  line-height: 1;
+  color: #fff;
+}
+.dropdown-toggle.baseddt {
+  padding-right: 50px;
+  background: transparent;
+  border: none;
+}
+.menu-item.active:before {
+  font-family: 'FontAwesome';
+  content: "\f0d8";
+  color: #fff;
+  bottom: 0;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  margin-left: 1.9%;
+  bottom: 12px;
+}
+/************************************************************************************************************************************************
+                                                                      Icons
+************************************************************************************************************************************************/
+.icon {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.icon.small {
+  width: 27px;
+  height: 27px;
+  font-size: 18px;
+}
+.icon.medium {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+}
+/******************** angular modif style base **/
+.has-success {
+  color: inherit;
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: inherit !important;
+}
+.has-success .form-control {
+  color: inherit !important;
+  border-color: #ababab !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset !important;
+}
+.has-success .form-control:focus {
+  color: inherit !important;
+}
+.has-success .input-group-addon {
+  color: inherit !important;
+}
+.has-success .form-control-feedback {
+  color: inherit !important;
+}
+.glyphicon-ok::before {
+  content: none !important;
+}
+/************* IMPORT **************/
+.excelTemplate a:link,
+.excelTemplate a:visited,
+.excelTemplate a {
+  text-decoration: none !important;
+}
+/**************** GLOBAL **************/
+.import {
+  background-color: #F2F2F2;
+}
+.ui-autocomplete {
+  z-index: 9999;
+}
+.top5 {
+  margin-top: 5px;
+}
+.top7 {
+  margin-top: 7px;
+}
+.top10 {
+  margin-top: 10px;
+}
+.top15 {
+  margin-top: 15px;
+}
+.top17 {
+  margin-top: 17px;
+}
+.top30 {
+  margin-top: 30px;
+}
+.margin-l-0 {
+  margin-left: 0;
+}
+.margin-r-0 {
+  margin-right: 0;
+}
+.margin-r-35 {
+  margin-right: 35px !important;
+}
+.no-border {
+  border: 0 !important;
+}

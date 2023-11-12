@@ -1,0 +1,172 @@
+﻿/************************************************************************************************************************************************
+                                                            Left navigation
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+#com-nav-left {
+  font-family: Helvetica, Arial, sans-serif;
+  position: fixed;
+  background-color: #404040;
+  height: 100%;
+  width: 50px;
+  margin: 0 20px 0 0;
+  z-index: 40;
+  /* TOOGLE*/
+  /* MENU ITEMS*/
+}
+#com-nav-left:hover {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #FF6600;
+}
+#com-nav-left #nav-toogle {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  /*background-color: @colorPurple;*/
+  color: #FFFFFF;
+  width: 100%;
+  font-size: 20px;
+  display: block;
+}
+#com-nav-left #nav-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 2px;
+}
+#com-nav-left #nav-items .menuHoverTitle {
+  background-color: #FF6600;
+  font-weight: bold;
+}
+#com-nav-left #nav-items li {
+  line-height: 50px;
+  list-style: none;
+  position: relative;
+}
+#com-nav-left #nav-items li svg {
+  font-size: 24px;
+}
+#com-nav-left #nav-items li:hover ul.menuHover {
+  visibility: visible;
+}
+#com-nav-left #nav-items li a {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  color: #f8f8f8;
+}
+#com-nav-left #nav-items li a.level1 {
+  font-weight: bold;
+  padding-right: 10px;
+}
+#com-nav-left #nav-items li a.level2 {
+  font-size: 12px;
+  padding-left: 50px !important;
+  line-height: 25px;
+  display: none;
+}
+#com-nav-left #nav-items li a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0 !important;
+}
+#com-nav-left #nav-items li a:active,
+#com-nav-left #nav-items li a:focus {
+  text-decoration: none;
+}
+#com-nav-left #nav-items li a.nodeActive {
+  color: #ff7900;
+}
+#com-nav-left #nav-items li a span.menuIcon {
+  width: 46px;
+  text-align: center;
+  display: inline-block;
+}
+#com-nav-left #nav-items li i {
+  font-size: 25px;
+}
+#com-nav-left #nav-items ul.menuHover {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 50px;
+  z-index: 1;
+  width: 320px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #363636;
+  opacity: 0.94;
+}
+#com-nav-left #nav-items ul.menuHover a {
+  padding-left: 20px;
+  font-weight: bold;
+}
+#com-nav-left #nav-items ul.menuHover .disabled {
+  cursor: default;
+  color: #FFFFFF;
+  background-color: #FF6600;
+  border-left: 0;
+}
+#com-nav-left #nav-items ul.menuHover li {
+  list-style: none;
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+}
+#com-nav-left #nav-items ul.menuHover li:hover {
+  background-color: #FFD3AB;
+}
+#com-nav-left #nav-items ul.menuHover li:hover a {
+  color: #000000;
+}
+#com-nav-left #nav-items .level1Closed .level2 {
+  display: none !important;
+}
+#com-nav-left #nav-items .static .selected {
+  color: #ff7900;
+}
+/* MENU FERME*/
+#s4-workspace .hideMenuClosed {
+  display: none;
+}
+/* MENU OUVERT*/
+#s4-workspace.nav-left-open #com-nav-left {
+  width: 250px;
+}
+#s4-workspace.nav-left-open #com-nav-left .ms-core-navigation {
+  display: block;
+}
+#s4-workspace.nav-left-open #nav-items .level2 {
+  display: block;
+}
+#s4-workspace.nav-left-open #contentBox {
+  margin-left: 265px !important;
+}
+#s4-workspace.nav-left-open #s4-ribbonrow {
+  margin-left: 250px;
+}
+#s4-workspace.nav-left-open .hideMenuClosed {
+  display: inline;
+}
+#s4-workspace.nav-left-open #nav-items li:hover ul.menuHover {
+  visibility: hidden;
+}
+/* MODALE*/
+.ms-dialog #contentRow #contentBox {
+  margin-left: 0 !important;
+}
+.ms-dialog #com-nav-left {
+  display: none !important;
+}

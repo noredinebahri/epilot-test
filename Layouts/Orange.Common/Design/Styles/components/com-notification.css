@@ -1,0 +1,158 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Notification
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-notification {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #EEE;
+  color: #f3f3f3;
+  right: 0px;
+  top: 0px;
+  font-weight: bold;
+  position: absolute;
+  height: calc(100vh - 60px);
+  z-index: 50;
+  box-shadow: -1px 1px 9px #999;
+}
+.com-notification.notification-open {
+  width: 450px;
+  transition: width 0.2s;
+}
+.com-notification.notification-open:after {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 100px;
+  color: #404040;
+  bottom: 5%;
+  left: 35%;
+  z-index: 0;
+}
+.com-notification.notification-close {
+  width: 20px;
+  transition: width 0.2s;
+  /*opacity: 0.6;*/
+}
+.com-notification.notification-close div {
+  /*opacity:0.4;*/
+}
+.com-notification.notification-close div.nav-section-search {
+  padding: 0;
+}
+.com-notification .nav-section {
+  height: 50px;
+  position: relative;
+}
+.com-notification .nav-section .nav-header {
+  height: 60px;
+  line-height: 60px;
+  background: #FF6600;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  /*.user-ico {
+                height: 50px;
+                width: 40px;
+                float: left;
+                text-align: center;
+                font-size: 20px;
+            }*/
+}
+.com-notification .nav-section .nav-header .txtContainer {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 10px;
+  float: left;
+}
+.com-notification .nav-section-notification {
+  color: #000000;
+  margin-top: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.com-notification .nav-section-notification .aucune-notification {
+  padding: 10px 30px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic {
+  max-height: 630px;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification {
+  width: 100%;
+  padding: 5px 0 2px 0;
+  background: linear-gradient(to right, #EEE, #CCC, #CCC, #CCC, #CCC, #CCC, #EEE) no-repeat bottom;
+  background-size: 100% 1px;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification.nonLu {
+  background-color: #FFE4CC;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .header-notification {
+  font-size: 15px;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .header-notification .header-picto {
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+  font-size: 15px;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .header-notification .header-picto.alerte {
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .header-notification .header-titre {
+  display: inline-block;
+  width: 55%;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .header-notification .header-date {
+  display: inline-block;
+  width: 28%;
+  font-size: 11px;
+  color: #777777 !important;
+  text-align: right;
+  font-weight: 200;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .content-notification {
+  font-weight: 200;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .content-notification.nonLu {
+  font-weight: 700 !important;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .content-notification.alerte {
+  border-left: 3px solid red;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .content-notification p {
+  font-size: 14px;
+  color: #555555;
+  padding: 0 8%;
+  line-height: 1.2;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .en-savoir-plus-notification {
+  width: 100%;
+  text-align: right;
+  padding: 0 30px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .en-savoir-plus-notification a {
+  font-weight: 200;
+  font-size: 11px;
+  color: #FF6600;
+}
+.com-notification .nav-section-notification .scrollbar-dynamic .bloc-notification .en-savoir-plus-notification a span {
+  color: #666666;
+}
+.com-notification.com-button-open-top {
+  box-shadow: 1px 1px 9px #999;
+}

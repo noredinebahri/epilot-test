@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Home" List="113" Url="_catalogs/wp">
+    <File Path="Home\Home.webpart" Url="Orange.EPilot_Home.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="EPilot" />
+    </File>
+  </Module>
+</Elements>

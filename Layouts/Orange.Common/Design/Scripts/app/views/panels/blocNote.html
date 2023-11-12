@@ -1,0 +1,231 @@
+﻿<div ng-controller="blocNoteController as bn" ng-cloak>
+    <div class="bloc-note-top-button" 
+         ng-class="{ 'active' : bn.Panel.Open && (bn.panelCurrent == bn.Panel.Name) }"
+         ng-click="$event.stopPropagation(); bn.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fas fa-comments"></span>
+                <span class="fa-layers-counter fa-2x" ng-if="bn.Panel.IndicateurNotesNonLu != 0">
+                    <span>{{bn.Panel.IndicateurNotesNonLu}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="com-bloc-note ms-dialogHidden"
+         ng-class="{'open' : bn.Panel.Open,  'close' : !bn.Panel.Open}"
+         ng-if="(bn.panelCurrent == bn.Panel.Name)">
+        <div ng-if="bn.Panel.Open">
+            <div class="nav-section nav-section-header" title="Profil acteur">
+                <div class="txtContainer">
+                    <span>Mon bloc notes collaboratif</span>
+                </div>
+            </div>
+            <div class="nav-section nav-section-main">
+                <!--PANNEAU DE GAUCHE-->
+                <div class="panel-left col-md-3">
+                    <ul>
+                        <li class="enabled" ng-click="bn.Notes.Load(bn.Tabs.MesNotes)" ng-class="{ 'active' : bn.Tabs.Current ==  bn.Tabs.MesNotes}" > <i class="fas fa-user" aria-hidden="true"></i> <span>Moi</span> </li>
+                        <li ng-if="bn.ActeurConnecte.TeamMembers.length > 0"> 
+                            <i class="fa fa-users" aria-hidden="true"></i> <span>Mon équipe</span>
+                            
+                           <ul>
+                               <li ng-repeat="member in bn.ActeurConnecte.TeamMembers" class="enabled" ng-click="bn.Notes.Load(bn.Tabs.Equipe, member.Code, member.Label)" ng-class="{ 'active' : (bn.Tabs.Current ==  bn.Tabs.Equipe) && (bn.Notes.UtilisateurCodeAlliance == member.Code) }">
+                                   <i class="far fa-user"></i>&nbsp;<span>{{member.Label}}</span> 
+                               </li>
+                           </ul>
+                        </li>
+                        <li class="enabled" ng-click="bn.Notes.Load(bn.Tabs.MonManager)" ng-class="{ 'active' : bn.Tabs.Current ==  bn.Tabs.MonManager }"> <i class="fas fa-user-secret"></i> <span>Mon manager</span> </li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> <span>Autres</span> 
+                            <ul>
+                                <li ng-repeat="favori in bn.Tabs.Autre.Favoris" class="enabled"  ng-class="{ 'active' : (bn.Tabs.Current ==  bn.Tabs.Autres) && (bn.Notes.UtilisateurCodeAlliance == favori.FavorisCodeAlliance) }">
+                                    <i class="far fa-user"></i>
+                                    <span ng-click="bn.Notes.Load(bn.Tabs.Autres,favori.FavorisCodeAlliance,favori.FavorisNom)">{{favori.FavorisNom}} </span> 
+                                   <span id="removeUser" ng-click="bn.Tabs.Autre.Delete(favori.Id)"> &nbsp; <i class="far fa-trash-alt"></i> </span> 
+                                </li>
+                                <li>
+                                    <md-autocomplete id="overrideUser"
+                                                     md-no-cache="true"
+                                                     md-selected-item="bn.Tabs.Autre.selectedItem"
+                                                     md-selected-item-change="bn.Tabs.Autre.Select(item)"
+                                                     md-search-text-change="bn.Tabs.Autre.SearchUser(bn.Tabs.Autre.searchText)"
+                                                     md-search-text="bn.Tabs.Autre.searchText"
+                                                     md-items="item in bn.Tabs.Autre.SearchUser(bn.Tabs.Autre.searchText)"
+                                                     md-item-text="item.NomPrenom"
+                                                     md-min-length="3"
+                                                     placeholder="Ajouter un utilisateur"
+                                                     md-menu-class="autocomplete-custom-template"
+                                                     md-menu-container-class="custom-container">
+                                        <md-item-template>
+                                            <span class="item-title">
+                                                <i class="far fa-user"></i>
+                                            </span>
+                                            <span class="item-metadata">
+                                                <span>
+                                                    <strong>{{item.NomPrenom}}</strong>
+                                                </span>
+                                            </span>
+                                        </md-item-template>
+                                    </md-autocomplete>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--PANNEAU DE DROITE-->
+                <div class="panel-right col-md-9 padding0">
+                    <div class="scrollbar-dynamic"  data-jquery-scrollbar="bn.jQueryScrollbarOptions">
+                        <div class="row section-titre">
+                            <div class="col-xs-10 titre">
+                                <span ng-if="bn.Tabs.Current ==  bn.Tabs.MesNotes">Mes notes</span>
+                                <span ng-if="bn.Tabs.Current ==  bn.Tabs.Equipe">Notes de mon équipe : {{bn.Notes.UtilisateurDisplayName}} </span>
+                                <span ng-if="bn.Tabs.Current ==  bn.Tabs.MonManager">Notes de mon manager</span>
+                                <span ng-if="bn.Tabs.Current ==  bn.Tabs.Autres">Notes de : {{bn.Notes.UtilisateurDisplayName}} </span>
+                            </div>
+                            <div class="col-xs-2" style="text-align: right;padding-right: 30px;">
+                                <div class="com-button type-2 primary btn-addnew" ng-class="{ 'active' : bn.Notes.NouvelleNote.IsOpened }" ng-click="bn.Notes.NouvelleNote.Display()"><i class="fas fa-plus"></i> Ajouter</div>
+                            </div>
+                        </div>
+                        <div class="row section-add-new" ng-if="bn.Notes.NouvelleNote.IsOpened">
+                                <div class="col-xs-12">
+                                    <div class="contenu">
+                                        <span class="titre">
+                                            Nouvelle note
+                                        </span>
+                                        <ng-form name="noteForm" ng-submit="bn.Notes.NouvelleNote.Save(noteForm)" novalidate>
+                                            <md-input-container class="md-block" flex-gt-sm>
+                                                <label>Titre de la notre</label>
+                                                <input ng-model="bn.Notes.NouvelleNote.Current.Titre" required>
+                                            </md-input-container>
+
+                                            <md-input-container md-no-float class="md-block">
+                                                <text-angular ta-toolbar="[['bold','italics','underline'],['ul','ol'], ['clear']]" ng-model="bn.Notes.NouvelleNote.Current.Texte" required placeholder="Description de la note*"></text-angular>
+                                            </md-input-container>
+
+                                            <div class="com-button type-2 primary save"
+                                                 ng-class="{ 'disabled-note' : !noteForm.$valid }"
+                                                 ng-click="bn.Notes.NouvelleNote.Save(noteForm)">
+                                                <span class="fas fa-save"></span>
+                                                <span>Enregistrer</span>
+                                            </div>
+
+                                            <div class="com-button type-2 secondary cancel"
+                                                 ng-click="bn.Notes.NouvelleNote.Reset(noteForm)">
+                                                <i class="fas fa-times"></i>
+                                                <span>Annuler</span>
+                                            </div>
+                                            <div class="cb"></div>
+                                        </ng-form>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row section-resultat">
+                            <div class="col-xs-12">
+                                <div class="recherche">
+                                    <div class="form-recherche">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input class="form-control" type="text" ng-model="bn.Filtre.Text" ng-change="bn.Filtre.Search()" placeholder="Rechercher une note par nom, date, auteur et contenu" />
+                                    </div>
+                                </div>
+                                <div class="mes-notes">
+                                    <div class="ma-note" ng-class="{ 'non-lu' : !note.Lu }"
+                                         ng-repeat="note in bn.Notes.List"
+                                         ng-click="bn.Notes.EnSavoirPlus($index);">
+                                        <div class="entete-note row">
+                                            <div class="col-xs-10">
+                                                <i class="far fa-user"></i>
+                                                <span>{{note.NomPrenomCreateur}}</span>
+                                                <span class="dateModification">{{note.Date | date:'dd/MM/yyyy'}}</span>
+                                            </div>
+                                            <div class="col-xs-2 button-container" >
+                                                <span class="button-note"
+                                                      ng-click="bn.Notes.ModificationForm.Open($index)"
+                                                      ng-class="{ 'disabled-button-note' : !note.PeutModifier }">
+                                                    <span class="fas fa-pencil-alt"></span>
+                                                </span>
+                                                <span class="button-note"
+                                                      ng-class="{ 'disabled-button-note' : !note.PeutModifier }"
+                                                      ng-click="bn.Notes.Delete(note.Id, $index)">
+                                                    <span class="fas fa-trash-alt"></span>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="contenu-note">
+
+                                            <div class="titre" ng-bind="note.Titre"></div>
+
+                                            <span ng-bind-html="note.Texte | limitTo: note.Limite" ng-if="$index != bn.Notes.ModificationForm.IndexToEdit">
+                                                <span ng-if="note.Limite == bn.Notes.TailleTexteReduit && note.Texte.length > bn.Notes.TailleTexteReduit"> ...</span>
+                                            </span>
+                                            <text-angular ta-toolbar="[['bold','italics','underline'],['ul','ol'], ['clear']]"
+                                                          ng-if="$index == bn.Notes.ModificationForm.IndexToEdit"
+                                                          ng-trim="false"
+                                                          ng-model="note.Texte"
+                                                          rows="10"
+                                                          required></text-angular>
+                                            <div class="bouton-modification-note" ng-if="$index == bn.Notes.ModificationForm.IndexToEdit">
+                                                <div class="com-button type-2 primary btn-addnew" ng-click="bn.Notes.ModificationForm.Save($index)"><span>Enregistrer</span></div>
+                                                <div class="com-button type-2 primary btn-addnew" ng-click="bn.Notes.ModificationForm.Cancel($index)"><span>Annuler</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="nombre-commentaire-note"
+                                             ng-if="note.NombreCommentaires && note.Limite == bn.Notes.TailleTexteReduit">
+                                            <i class="far fa-comments"></i>
+                                            {{note.NombreCommentaires}}
+                                            <span ng-if="note.NombreCommentaires > 1">commentaires</span>
+                                            <span ng-if="note.NombreCommentaires == 1">commentaire</span>
+                                            <span class="commentaire-note-non-lu" ng-if="note.NombreCommentairesNonLus">
+                                                - {{note.NombreCommentairesNonLus}} non lu
+                                            </span>
+                                        </div>
+                                        <div class="commentaires-note" ng-if="note.Limite != bn.Notes.TailleTexteReduit">
+                                            <div ng-repeat="comm in note.Commentaires">
+                                                <div class="commentaire-note" ng-class="{ 'non-lu' : !comm.Lu }" ng-click="bn.Commentaires.ChangeToRead(comm);">
+                                                    <div class="auteur-commentaire-note">
+                                                        <div>
+                                                            <i class="far fa-user"></i>
+                                                            <span ng-bind="comm.NomPrenomCreateur"></span>
+                                                            <span ng-bind="comm.Date | date:'dd/MM/yyyy'" class="dateModification"></span>
+                                                            <!--<span id="delete" ng-click="$event.stopPropagation(); bn.Commentaires.Delete($parent.$index,$index)" ng-if="comm.PeutSupprimer">
+                                                                <i class="far fa-trash-alt"></i>
+                                                            </span>-->
+                                                        </div>
+                                                    </div><div class="texte-commentaire-note">
+                                                        <span ng-bind="comm.Texte"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ajout-commentaire-note" ng-if="note.Limite != bn.Notes.TailleTexteReduit && $index != bn.Notes.ModificationForm.IndexToEdit">
+                                            <i class="far fa-comment"></i> Ajouter votre commentaire
+                                            <input type="text"
+                                                   class="form-control"
+                                                   ng-model="note.Commentaire"
+                                                   placeholder="Ajouter votre commentaire ..."
+                                                   enter-event="bn.Commentaires.Save($index)" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>      
+         </div>
+        <div ng-if="!bn.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header">&nbsp;</div>
+            </div>
+            <div class="nav-section-main"></div>
+        </div>
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); bn.Panel.Display()">
+            <div ng-if="bn.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="bn.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+</div>

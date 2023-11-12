@@ -1,0 +1,73 @@
+﻿<div ng-controller="notificationCommonController as no" ng-cloak>
+    <div class="notification-top-button" 
+         ng-class="{ 'active' : no.Panel.Open && (no.panelCurrent == no.panelNotification) }" 
+         ng-click="$event.stopPropagation(); no.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fa fa-bell"></span>
+                <span class="fa-layers-counter fa-2x" ng-if="no.nbNotification != 0">
+                    <span>{{no.nbNotification}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="com-notification ms-dialogHidden" ng-class="{'notification-open' : no.Panel.Open,
+            'notification-close' : !no.Panel.Open}" ng-if="no.panelCurrent == no.Panel.Name">
+        <div ng-if="no.Panel.Open">
+            <div class="nav-section">
+                <div class="nav-header" title="Profil acteur">
+                    <div class="txtContainer">
+                        <span>Notifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-section-notification">
+                <div class="scrollbar-dynamic" data-jquery-scrollbar="no.jQueryScrollbarOptions" ng-if="no.notifications.length > 0">
+                    <div class="bloc-notification" ng-repeat="notif in no.notifications" ng-class="{ 'nonLu': notif.Lu == false }">
+                        <div class="header-notification">
+                            <div class="header-picto" ng-class="{ 'alerte': notif.IsAlerte }">
+                                <i class="fa" ng-class="{ 'fa-info-circle': !notif.IsAlerte, 'fa-exclamation-triangle': notif.IsAlerte }"></i>
+                            </div>
+                            <div class="header-titre" title="{{notif.Titre}}">
+                                <span ng-bind="notif.Titre | limitTo: 30"></span>
+                                <span ng-if="notif.Titre.length > 30">...</span>
+                            </div>
+                            <div class="header-date">
+                                <span ng-bind="notif.DateModification | date:'dd/MM/yyyy à HH:mm'"></span>
+                            </div>
+                        </div>
+                        <div class="content-notification" ng-class="{ 'alerte': notif.IsAlerte, 'nonLu': notif.Lu == false }">
+                            <p>
+                                <span ng-bind-html="notif.Texte | limitTo: (notif.Limite ? notif.Limite : 70)"></span>
+                                <span ng-if="!notif.Limite || notif.Limite == 70"> ...</span>
+                            </p>
+                        </div>
+                        <div class="en-savoir-plus-notification">
+                            &nbsp;<a ng-if="!notif.Limite || notif.Limite == 70" hef="#" ng-click="no.enSavoirPlus($index)">En savoir <span>+</span></a>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+                <div ng-if="no.notifications.length == 0">
+                    <p class="aucune-notification">Aucune notification disponible</p>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!no.Panel.Open">
+            <div class="nav-section">
+                <div class="nav-header" title="Notification">&nbsp;</div>
+            </div>
+            <div class="nav-section-main"></div>
+        </div>
+
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); no.Panel.Display()">
+            <div ng-if="no.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="no.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+    
+</div>

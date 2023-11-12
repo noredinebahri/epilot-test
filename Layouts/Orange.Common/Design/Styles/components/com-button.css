@@ -1,0 +1,121 @@
+﻿/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+/*
+    inventaires non exhaustif des types de boutons
+
+    - [] Orange.EPilot/Pages/PlanAction.aspx > nouvelles action
+        - [] blanc sur gris clair (annuler)
+        - [] blanc sur gris (valider disabled)
+        - [] blanc sur noir, hover orange (valider)
+    - [] Orange.EPilot/Pages/Ventilation.aspx // -> bouton noir-blanc
+        - [] gris sur blanc et border gris (enregistrer disabled)
+        - [] 
+    - [] Orange.EPilot/Pages/PlanAction.aspx > nouvelles action // -> bouton noir-blanc
+        - [] noir sur blanc et border noir (Exporter)
+        - [] noir sur blanc et border gris (ajouter une action) // pas conforme au reste et c'est un <a> dans une div !
+
+    - [] les boutons des pages admin TPS // -> définis dans global.less
+        - [] blanc sur orange sans hover
+        - [] noir sur blanc sans hover
+
+*/
+.com-button {
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.com-button.type-1 {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+}
+.com-button.type-1.primary {
+  color: #fff;
+  background-color: #000000;
+}
+.com-button.type-1.primary:hover {
+  background-color: #FF6600;
+}
+.com-button.type-1.primary.disabled,
+.com-button.type-1.primary.disabled:hover {
+  cursor: no-drop;
+  background-color: #DBDBDB;
+}
+.com-button.type-1.secondary {
+  color: #fff;
+  background-color: #AAAAAA;
+}
+.com-button.type-1.secondary:hover {
+  background-color: #888888;
+}
+.com-button.type-1.secondary.disabled,
+.com-button.type-1.secondary.disabled:hover {
+  cursor: no-drop;
+}
+.com-button.type-1.tertiary {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+}
+.com-button.type-1.tertiary:hover {
+  background-color: #AAAAAA;
+}
+.com-button.type-1.tertiary.disabled,
+.com-button.type-1.tertiary.disabled:hover {
+  cursor: no-drop;
+}
+.com-button.type-2 {
+  font-size: 14px;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  cursor: pointer;
+}
+.com-button.type-2.primary,
+.com-button.type-2.secondary {
+  background-color: #FFFFFF;
+}
+.com-button.type-2.primary:hover,
+.com-button.type-2.secondary:hover {
+  background-color: #999999;
+}
+.com-button.type-2.primary.disabled,
+.com-button.type-2.secondary.disabled,
+.com-button.type-2.primary.disabled:hover,
+.com-button.type-2.secondary.disabled:hover {
+  cursor: no-drop;
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+.com-button.type-3 {
+  font-size: 14px;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  padding: 2px 10px;
+  cursor: pointer;
+  height: 26px;
+}
+.com-button.type-3.primary,
+.com-button.type-3.secondary {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+}
+.com-button.type-3.primary:hover,
+.com-button.type-3.secondary:hover {
+  background-color: #FFFFFF;
+  color: #FF7900;
+}
+.com-button.type-3.secondary {
+  border: 0;
+}

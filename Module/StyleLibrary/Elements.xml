@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="StyleLibrary" RootWebOnly="TRUE" Url="Style Library">
+    <File Path="StyleLibrary\Tutoriel.js" Url="tuto/Tutoriel.js"  Type="GhostableInLibrary"/>
+  </Module>
+</Elements>

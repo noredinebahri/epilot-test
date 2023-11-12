@@ -1,0 +1,71 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - affichage des alertes
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+
+.com-topnav-alerts {
+    background-color: @colorBlack !important;
+    color:@colorWhite;
+    width: 430px;
+    line-height: 60px;
+    text-align: right;
+    font-size: 25px;
+
+    .button-topnav {
+        display: inline-block;
+        position: relative;
+        text-align:center;
+        cursor: pointer;
+        border-left:1px solid #404040;
+
+        &:last-child {
+            border-right:1px solid #404040;
+        }
+
+        .active, &:hover {
+            width: 60px;
+            color: @colorOrangeDefault;
+            background-color: @colorGrey13;
+        }
+
+
+        div {
+            width: 60px;
+
+            &.hidden {
+                width: 0px;
+            }
+
+            svg {
+                z-index: 100;
+            }
+        }
+    }
+
+    .hierarchie-top-button  {
+        .fa-layers-counter {
+            background-color: @colorWhite;
+            color: @colorBlack;
+        }
+    }
+}
+
+.fa-layers {
+    .fa-layers-counter {
+        &.fa-2x {
+            margin:-10px 10px 0 0;
+            z-index: 200;
+            font-size: 1.8em;
+        }
+    }
+}
+
+.hierarchie-top-button {
+    .fa-layers-counter {
+        &.fa-2x {
+            color: #FF6600;
+        }
+    }
+}

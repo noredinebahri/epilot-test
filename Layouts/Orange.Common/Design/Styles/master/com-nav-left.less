@@ -1,0 +1,202 @@
+﻿/************************************************************************************************************************************************
+                                                            Left navigation
+************************************************************************************************************************************************/
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+#com-nav-left {
+    font-family: @fontDefault;
+    position: fixed;
+    background-color: @colorGrey13;
+    height: 100%;
+    width: 50px;
+    margin: 0 20px 0 0;
+    z-index: 40;
+    &:hover{
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: @colorGrey13  @colorOrangeDefault;
+    }
+    /* TOOGLE*/
+    #nav-toogle {
+        height: 50px;
+        line-height: 50px;
+        text-align:center;
+        /*background-color: @colorPurple;*/
+        color:@colorWhite;
+        width: 100%;
+        font-size:20px;
+        display: block;
+    }
+    /* MENU ITEMS*/
+    #nav-items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 2px;
+
+        .menuHoverTitle {
+            background-color:#FF6600;
+            font-weight:bold;
+        }
+
+        li {
+            line-height: 50px;
+            list-style: none;
+            position: relative;
+
+            svg {
+                font-size: 24px;
+            }
+
+            &:hover ul.menuHover {
+                visibility: visible;
+            }
+                       
+            a {
+                display: block;
+                text-decoration: none;
+                text-align:left;
+                color: #f8f8f8;
+
+                &.level1 {
+                    font-weight: bold;
+                    padding-right: 10px;
+                }
+
+                &.level2 {
+                    font-size: 12px;
+                    padding-left: 50px !important;
+                    line-height: 25px;
+                    display: none;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: @colorWhite;
+                    background-color: rgba(255,255,255,0.2);
+                    border-radius: 0 !important;
+                    //border-left: @colorRed 2px solid;
+                }
+
+                &:active, &:focus {
+                    text-decoration: none;
+                }
+
+                &.nodeActive {
+                    color: rgba(255,121,0,1);
+                }
+
+                span.menuIcon {
+                    width: 46px;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+
+            i {
+                font-size: 25px;
+            }
+        }
+
+        ul.menuHover {
+            position: fixed;
+            visibility: hidden;
+            top: 0;
+            left: 50px;
+            z-index: 1;
+            width: 320px;
+            text-align: center;
+            font-family: @fontDefault;
+            font-size: 16px;
+
+            background-color: #363636;
+            opacity: 0.94;
+
+            a {
+                padding-left: 20px;
+                font-weight:bold;
+            }
+
+            .disabled {
+                cursor: default;
+                color: @colorWhite;
+                background-color: @colorOrangeDefault;
+                border-left: 0;
+            }
+
+            li {
+                list-style: none;
+                position: relative;
+                height: 38px;
+                line-height:38px;
+
+                &:hover {
+                    a {
+                        color:@colorBlack;
+                    }
+                    background-color:#FFD3AB;
+                }
+            }
+        }
+
+        .level1Closed .level2 {
+            display: none !important;
+        }
+
+        .static .selected {
+            color: rgba(255,121,0,1);
+        }
+    }
+}
+
+/* MENU FERME*/
+#s4-workspace .hideMenuClosed {
+    display: none;
+}
+
+/* MENU OUVERT*/
+#s4-workspace.nav-left-open {
+    #com-nav-left {
+        width: 250px;
+
+        .ms-core-navigation {
+            display: block;
+        }
+    }
+
+    #nav-items .level2 {
+        display: block;
+    }
+
+    #contentBox {
+        margin-left: 265px !important;
+    }
+
+    #s4-ribbonrow {
+        margin-left: 250px;
+    }
+
+    .hideMenuClosed {
+        display: inline;
+    }
+
+    #nav-items li:hover ul.menuHover {
+        visibility: hidden;
+    }
+}
+
+/* MODALE*/
+.ms-dialog {
+    #contentRow #contentBox {
+        margin-left: 0 !important;
+    }
+
+    #com-nav-left {
+        display: none !important;
+    }
+}
+

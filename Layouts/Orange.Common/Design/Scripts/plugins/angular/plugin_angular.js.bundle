@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>false</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/angular.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-moment.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-touch.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-animate.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-sanitize.min.js</file>
+
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/ui-grid.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/fileSaver.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/csv.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/pdfmake.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/vfs_fonts.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/ui-bootstrap-tpls-1.3.3.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/tv4.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/ObjectPath.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/schema-form.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/bootstrap-decorator.min.js</file>
+    <file>/Layouts/Orange.Common/Design/Scripts/plugins/angular/ng-file-upload.min.js</file>
+  </files>
+</bundle>

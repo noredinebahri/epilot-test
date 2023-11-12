@@ -1,0 +1,188 @@
+﻿/************************************************************************************************************************************************
+                                                                    Admin Page header
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-admin-header {
+  background-color: #666666;
+  color: #FFFFFF;
+  height: 71px;
+}
+.com-admin-header input[type=text] {
+  width: 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-image: url('/_layouts/15/Orange.Common/Design/Images/recherche_icn.png');
+  transition: width 0.4s ease-in-out;
+  padding: 2px 5px 2px 40px;
+}
+.com-admin-header input[type=text]:focus {
+  width: 400px;
+}
+.com-admin-header .btn-group {
+  text-align: center;
+  width: 100px;
+  height: 100%;
+  border-right: 1px solid #FFFFFF;
+}
+.com-admin-header .btn-group i {
+  font-size: 30px;
+}
+.com-admin-header .btn-group li {
+  height: 100%;
+}
+.com-admin-header .btn-agency {
+  padding: 0;
+}
+.com-admin-header .btn-agency div:first-child {
+  line-height: 30px;
+}
+.com-admin-header .btn-agency div:first-child .fa-home,
+.com-admin-header .btn-agency div:first-child .fa-crosshairs {
+  font-size: 25px;
+}
+.com-admin-header .btn-agency .agencyName {
+  width: 80px;
+  font-size: 14px;
+}
+.com-admin-header .btn-agency.module-selector div:first-child {
+  line-height: 33px;
+}
+.com-admin-header .periodName {
+  width: 80px;
+  font-size: 14px;
+}
+.com-admin-header .btn-multiExport {
+  float: right;
+  padding-top: 5px;
+  padding-left: 10px;
+  text-align: center;
+  border-left: 1px solid #FFFFFF;
+  height: 71px;
+  background-color: #50BE87;
+}
+.com-admin-header .btn-multiExport .fa-download {
+  font-size: 35px;
+  margin-top: 10%;
+}
+.com-admin-header .btn-multiExport .exporter {
+  width: 80px;
+  line-height: 23px;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.com-admin-header .header-title {
+  font-size: 30px;
+  margin-left: 15px;
+  line-height: 70px;
+}
+.com-admin-header .header-title.cap-header-title {
+  line-height: 0;
+  margin-top: 10px;
+}
+.com-admin-header .header-title.cap-header-title span {
+  line-height: 30px;
+}
+.com-admin-header .header-title .header-selected-module-name {
+  color: #CCC;
+}
+.com-admin-header .sub-header-title {
+  font-size: 20px;
+  line-height: 30px;
+}
+.com-admin-header .btn-result {
+  padding-top: 5px;
+  font-size: 30px;
+  text-align: center;
+  width: 100px;
+  height: 100%;
+  background-color: #A885D8;
+  color: #FFFFFF;
+}
+.com-admin-header .btn-action,
+.com-admin-header .btn-accueil {
+  float: right;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 30px;
+  text-align: center;
+  border-left: 1px solid #FFFFFF;
+  width: 90px;
+  height: 100%;
+  background-color: #50BE87;
+  cursor: pointer;
+}
+.com-admin-header .btn-action a,
+.com-admin-header .btn-accueil a {
+  color: #FFFFFF;
+}
+.com-admin-header .btn-action:hover,
+.com-admin-header .btn-accueil:hover {
+  background-color: #808080;
+}
+.com-admin-header .btn-action:hover a,
+.com-admin-header .btn-accueil:hover a {
+  color: #000000 !important;
+}
+.com-admin-header .btn-action[disabled],
+.com-admin-header .btn-accueil[disabled] {
+  cursor: default;
+}
+.com-admin-header .btn-action[disabled] a,
+.com-admin-header .btn-accueil[disabled] a {
+  color: #666666 !important;
+  cursor: default;
+}
+.com-admin-header .btn-action.btn-action-info {
+  background-color: #FF6600;
+}
+.com-admin-header .btn-action.btn-action-info div:first-child {
+  font-size: 15px;
+  line-height: 15px;
+}
+.com-admin-header .btn-action.btn-action-info div:last-child {
+  font-size: 15px;
+  line-height: 36px;
+}
+.sub-header {
+  height: 30px;
+  background-color: #F2F2F2;
+  padding: 0 !important;
+  margin-bottom: 15px;
+}
+.sub-header .btn-accueil {
+  float: left;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #808080;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.sub-header .btn-accueil.active {
+  border-bottom: 3px solid #808080;
+  color: #000000 !important;
+  font-weight: bold;
+}
+.sub-header .btn-accueil.active a,
+.sub-header .btn-accueil.active a:visited {
+  color: #000000;
+}
+.sub-header .btn-accueil i {
+  font-size: 1.2em;
+}
+.sub-header .btn-accueil a,
+.sub-header .btn-accueil a:visited {
+  color: #000000;
+}

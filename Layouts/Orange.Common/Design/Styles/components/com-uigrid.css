@@ -1,0 +1,136 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Grille administration
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-uigrid {
+  /*Grid*/
+  /*Cell*/
+  /*    Pagination   */
+}
+.com-uigrid .grid {
+  z-index: 20;
+  height: calc(100vh - 195px);
+}
+.com-uigrid .ui-grid-cell-contents {
+  padding-left: 10px;
+}
+.com-uigrid .grid.ui-grid {
+  width: 100%;
+  border: none;
+  padding: 5px 0;
+}
+.com-uigrid .grid-align-center {
+  text-align: center;
+}
+.com-uigrid .ui-grid-row:hover .ui-grid-cell {
+  cursor: pointer;
+  background-color: #FF6600 !important;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.com-uigrid .ui-grid-header-cell-label {
+  margin-left: 0px;
+}
+.com-uigrid .ui-grid-sort-priority-number.ng-binding {
+  visibility: hidden;
+}
+.com-uigrid .ui-grid-header-canvas {
+  background-color: #F2F2F2;
+  border: none;
+}
+.com-uigrid .ui-grid-top-panel {
+  color: #000000;
+}
+.com-uigrid .ui-grid-pager-panel {
+  bottom: -20px;
+}
+.com-uigrid .icon {
+  font-size: 20px;
+}
+.com-uigrid .pagination,
+.com-uigrid .results-per-page {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-bottom: 15px;
+}
+.com-uigrid .pagination > li > a,
+.com-uigrid .results-per-page > li > a {
+  border: none !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
+  font-weight: bold !important;
+  margin-right: 6px;
+}
+.com-uigrid .pagination > .active > a,
+.com-uigrid .results-per-page > .active > a,
+.com-uigrid .pagination > .active > span,
+.com-uigrid .results-per-page > .active > span,
+.com-uigrid .pagination > .active > a:hover,
+.com-uigrid .results-per-page > .active > a:hover,
+.com-uigrid .pagination > .active > span:hover,
+.com-uigrid .results-per-page > .active > span:hover {
+  background-color: #FF6600 !important;
+  border: 2px solid #FF6600 !important;
+  color: #FFFFFF !important;
+}
+.com-uigrid .pagination > li > a:hover,
+.com-uigrid .results-per-page > li > a:hover,
+.com-uigrid .pagination > li > span:hover,
+.com-uigrid .results-per-page > li > span:hover {
+  background-color: #FF6600 !important;
+  border: 2px solid #FF6600 !important;
+  color: #FFFFFF !important;
+}
+.com-uigrid .pagination {
+  float: left;
+}
+.com-uigrid .pagination > li.pg-selected > a {
+  border: 1px solid #CCCCCC;
+  color: #FF6600;
+  background: #F2F2F2;
+  font-weight: bold;
+}
+.com-uigrid .pagination > li:first-child > a:focus,
+.com-uigrid .pagination > li:first-child > span:focus,
+.com-uigrid .pagination > li:last-child > a:focus,
+.com-uigrid .pagination > li:last-child > span:focus {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  color: #FF6600;
+}
+.com-uigrid .pagination > li:first-child > a:hover,
+.com-uigrid .pagination > li:first-child > span:hover,
+.com-uigrid .pagination > li:last-child > a:hover,
+.com-uigrid .pagination > li:last-child > span:hover {
+  background-color: #FF6600;
+  border: 1px solid #FF6600;
+  color: #FFFFFF;
+}
+.com-uigrid .item-per-page .item-per-page-selected {
+  background-color: #FF6600 !important;
+  border: 2px solid #FF6600 !important;
+  color: #FFFFFF !important;
+}
+.com-uigrid .results-per-page {
+  float: right;
+}
+.com-uigrid .results-per-page > li.active > a {
+  border: 1px solid #CCCCCC !important;
+  color: #FF6600 !important;
+  background: #FF6600 !important;
+  font-weight: bold !important;
+}

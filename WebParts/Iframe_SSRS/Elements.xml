@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Iframe_SSRS" List="113" Url="_catalogs/wp">
+    <File Path="Iframe_SSRS\Iframe_SSRS.webpart" Url="Orange.EPilot_Iframe_SSRS.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="EPilot" />
+      <Property Name="ChromeType">None</Property>
+    </File>
+  </Module>
+</Elements>

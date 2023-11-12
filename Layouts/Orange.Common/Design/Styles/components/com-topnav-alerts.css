@@ -1,0 +1,58 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - affichage des alertes
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-topnav-alerts {
+  background-color: #000000 !important;
+  color: #FFFFFF;
+  width: 430px;
+  line-height: 60px;
+  text-align: right;
+  font-size: 25px;
+}
+.com-topnav-alerts .button-topnav {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid #404040;
+}
+.com-topnav-alerts .button-topnav:last-child {
+  border-right: 1px solid #404040;
+}
+.com-topnav-alerts .button-topnav .active,
+.com-topnav-alerts .button-topnav:hover {
+  width: 60px;
+  color: #FF6600;
+  background-color: #404040;
+}
+.com-topnav-alerts .button-topnav div {
+  width: 60px;
+}
+.com-topnav-alerts .button-topnav div.hidden {
+  width: 0px;
+}
+.com-topnav-alerts .button-topnav div svg {
+  z-index: 100;
+}
+.com-topnav-alerts .hierarchie-top-button .fa-layers-counter {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.fa-layers .fa-layers-counter.fa-2x {
+  margin: -10px 10px 0 0;
+  z-index: 200;
+  font-size: 1.8em;
+}
+.hierarchie-top-button .fa-layers-counter.fa-2x {
+  color: #FF6600;
+}

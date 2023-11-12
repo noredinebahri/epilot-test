@@ -1,0 +1,179 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Notification
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-notification {
+    font-family: @fontDefault;
+    background-color: #EEE;
+    color: #f3f3f3;
+    right: 0px;
+    top: 0px;
+    font-weight: bold;
+    position: absolute;
+    height: calc(~"100vh - 60px");
+    z-index: 50;
+    box-shadow: -1px 1px 9px #999;
+
+
+    &.notification-open {        
+        width: 450px;
+        transition: width 0.2s;
+
+        &:after {
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            position: absolute;
+            font-size: 100px;
+            color: @colorGrey13;
+            bottom: 5%;
+            left: 35%;
+            z-index: 0;
+        }        
+    }
+
+    &.notification-close {        
+        width: 20px;
+        transition: width 0.2s;
+        /*opacity: 0.6;*/
+
+        div {
+            /*opacity:0.4;*/
+
+            &.nav-section-search {
+                padding:0;
+            }
+        }
+    }
+
+    .nav-section {
+        height: 50px;
+        position: relative;
+        
+        .nav-header {
+            height: 60px;
+            line-height:60px;
+            background: @colorOrangeDefault;
+            display: block;
+            font-size: 30px;
+            text-align: center;
+
+            /*.user-ico {
+                height: 50px;
+                width: 40px;
+                float: left;
+                text-align: center;
+                font-size: 20px;
+            }*/
+
+            .txtContainer {
+                text-align: left;
+                font-size: 20px;
+                margin-left: 10px;
+                float: left;
+            }
+        }
+    }
+
+    .nav-section-notification {
+        color: @colorBlack;
+        margin-top: 20px;
+        font-family: @fontDefault;
+
+        .aucune-notification {
+            padding: 10px 30px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .scrollbar-dynamic {
+            max-height: 630px;
+
+            .bloc-notification {
+                width: 100%;
+                padding: 5px 0 2px 0;
+                background: linear-gradient(to right, #EEE, #CCC, #CCC, #CCC, #CCC, #CCC, #EEE) no-repeat bottom;
+                background-size: 100% 1px;
+
+                &.nonLu {
+                    background-color: #FFE4CC;
+                }
+
+                .header-notification {
+                    font-size:15px;
+                    width:100%;
+                    font-family: @fontDefault;
+
+                    .header-picto {
+                        display: inline-block;
+                        width:8%;
+                        text-align: center;
+                        font-size: 15px;
+
+                        &.alerte {
+                            color:@colorWhite;
+                            background-color:@colorRed;
+                        }
+                    }
+
+                    .header-titre {
+                        display: inline-block;
+                        width:55%;
+                    }
+
+                    .header-date {
+                        display: inline-block;
+                        width:28%;
+                        font-size:11px;
+                        color: #777777 !important;
+                        text-align:right;
+                        font-weight:200;
+                    }
+                }
+
+                .content-notification {
+                    font-weight:200;
+
+                    &.nonLu {
+                        font-weight:700 !important;
+                    }
+
+                    &.alerte {
+                        border-left:3px solid red;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color:#555555;
+                        padding:0 8%;
+                        line-height: 1.2;
+                    }
+                }
+
+                .en-savoir-plus-notification {
+                    width: 100%;
+                    text-align: right;
+                    padding: 0 30px;
+                    cursor: pointer;
+                    margin-bottom:2px;
+
+                    a {
+                        font-weight: 200;
+                        font-size: 11px;
+                        color: @colorOrangeDefault;
+
+                        span {
+                            color: #666666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.com-button-open-top {
+        box-shadow: 1px 1px 9px #999;
+    }
+}

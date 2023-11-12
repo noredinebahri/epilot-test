@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Orange.EPilot.Iframe_ContextEPilot.Iframe_ContextEPilot, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Iframe - Contexte utilisateur </property>
+        <property name="Description" type="string">Iframe avec passage du contexte</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

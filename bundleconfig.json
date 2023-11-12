@@ -1,0 +1,214 @@
+[
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/common-global.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/common-init.js",
+      "Layouts/Orange.Common/Design/Scripts/common-tools.js"
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/app/directives/common-directives.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/multiSelect.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/loadingSpinner.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/jqueryAutocomplete.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/errorHttp.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/hierarchyNavigation.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/common/enterEvent.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/grid/itemsPerPage.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/grid/pagination.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/grid/itemsCounter.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/grid/datepickerPopup.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/grid/dateFormatter.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/buttons/addButton.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/buttons/exportButton.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/buttons/importButton.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/selector/agencySelector.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/selector/anneeSelector.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/selector/periodSelector.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/selector/moduleSelector.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/messages/msgSuccess.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/messages/msgWarning.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/messages/messageInfoAdmin.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/notification.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/overrideUser.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/blocNote.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/aide.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/telechargement.js",
+      "Layouts/Orange.Common/Design/Scripts/app/directives/panel/rechercheClient.js"
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/app/controllers/common-controllers.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/app/commonApp.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/baseCommonController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/basePopupCommonController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/confirmPopupController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/notificationCommonPopupController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/infosPopupController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/infosPopupNotCloseableController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/displayTopController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/notification/notificationCommonController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/overrideuser/overrideUserController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/blocnote/blocNoteController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/aide/aideVideoPopupController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/aide/aideController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/telechargement/telechargementController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/panels/rechercheClient/rechercheClientController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/telechargement/telechargementAddNewController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/homeController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/homeNavController.js",
+      "Layouts/Orange.Common/Design/Scripts/app/controllers/desabonnementController.js"
+
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/app/services/common-services.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/app/services/statistiqueService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/notificationCommonService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/blocNoteService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/homeService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/userService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/cacheService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/tutorielService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/telechargementService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/rechercheClientService.js",
+      "Layouts/Orange.Common/Design/Scripts/app/services/homeNavService.js"
+    ]
+  },
+
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/plugins/common-plugins.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery-1.10.2.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery-ui.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/moment-with-locales.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/bootstrap-datepicker.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/bootstrap-table-sort.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/bootstrap.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/bootstrap-menu.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery-comments.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery-multiselect.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery.linq.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/enjoyhint/enjoyhint.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/enjoyhint/jquery.enjoyhint.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/enjoyhint/kinetic.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/tableHeadFixer.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery.gridster.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/Chart.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/chartjs-plugin-datalabels.min.js"
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Scripts/plugins/angular/common-plugins-angular.js",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-touch.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-animate.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-local-fr.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-sanitize.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-moment.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-cache.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/dynamic-number.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-spinners.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ui-grid.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/fileSaver.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/csv.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ng-csv.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/pdfmake.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/vfs_fonts.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ui-bootstrap-tpls-2.5.0.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/tv4.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ObjectPath.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/schema-form.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/bootstrap-decorator.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ng-file-upload.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/ng-tags-input.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-ui-tree.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/rzslider.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/angular-datepicker.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/contextMenu.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/jquery.scrollbar.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/wisiwig/wysiwyg.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/textangular/textangular-rangy.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/textangular/textAngular-sanitize.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/textangular/textAngular.min.js",
+      "Layouts/Orange.Common/Design/Scripts/plugins/angular/colorPicker/bootstrap-colorpicker-module.min.js",
+    "Layouts/Orange.Common/Design/Scripts/plugins/angular/angularjs-chips.min.js"
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Styles/epilot-common.css",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Styles/components/com-admin-header.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-hierarchie-navigation.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-override-user.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-loading.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-modal.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-notification.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-bloc-note.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-button.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-aide.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-error.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-resultat-import.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-schema-form.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-selection-period.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-recherche-client.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-recherche-client-panel.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-tabs.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-telechargement.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-topnav-alerts.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-uigrid.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-switch.css",
+      "Layouts/Orange.Common/Design/Styles/components/com-message-info-admin.css",
+      "Layouts/Orange.Common/Design/Styles/master/com-nav-left.css",
+      "Layouts/Orange.Common/Design/Styles/master/com-nav-top.css",
+      "Layouts/Orange.Common/Design/Styles/master/home-nav.css",
+      "Layouts/Orange.Common/Design/Styles/master/com-suitebar.css",
+      "Layouts/Orange.Common/Design/Styles/master/global.css",
+      "Layouts/Orange.Common/Design/Styles/master/sharepoint.css",
+      "Layouts/Orange.Common/Design/Styles/master/sqlserver.css",
+      "Layouts/Orange.Common/Design/Styles/pages/template-2-columns.css"
+    ]
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Styles/epilot-common.min.css",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Styles/epilot-common.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "Layouts/Orange.Common/Design/Styles/plugins/common-plugins.css",
+    "inputFiles": [
+      "Layouts/Orange.Common/Design/Styles/plugins/bootstrap.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/bootstrap-theme.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/bootstrap-datepicker.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery-comments.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery-multiselect.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery-ui.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/ui-grid.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/ng-tags-input.bootstrap.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/ng-tags-input.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/angular-ui-tree.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/rzslider.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/angular-datepicker.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/angular-material.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery.scrollbar.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery.enjoyhint.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/jquery.gridster.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/wisiwig/editor.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/textangular/textangular.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/colorPicker/colorpicker.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/Chart.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/font-awesome-animation.min.css",
+      "Layouts/Orange.Common/Design/Styles/plugins/angularjs-chips.css"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <CustomActionGroup Title="$Resources:Orange.EPilot,CustomActionGroup_SiteFunctionnalGroupTitle;" Sequence="5" Description="$Resources:Orange.EPilot,CustomActionGroup_SiteFunctionnalGroupDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="WebTechnicalSiteCollectionGroupLinks" />
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_DataBaseConfigTitle;" Sequence="10" Description="$Resources:Orange.EPilot,CustomAction_DataBaseConfigDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="DatabaseSettings"  RequireSiteAdministrator = "TRUE" RootWebOnly="TRUE" Rights="ManageWeb" GroupId="WebTechnicalSiteCollectionGroupLinks">
+    <UrlAction Url="~site/_layouts/15/Orange.Common/Pages/SiteConfig.aspx" />
+  </CustomAction>
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_AnalyticsTitle;" Sequence="11" Description="$Resources:Orange.EPilot,CustomAction_AnalyticsDesciption;" Location="Microsoft.SharePoint.SiteSettings" Id="AnalyticsSettings"  RequireSiteAdministrator = "TRUE" RootWebOnly="TRUE" Rights="ManageWeb" GroupId="WebTechnicalSiteCollectionGroupLinks">
+    <UrlAction Url="~site/_layouts/15/Orange.Common/Pages/Analytics/AnalyticsConfig.aspx" />
+  </CustomAction>
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_SitePermissionTitle;" Sequence="12" Description="$Resources:Orange.EPilot,CustomAction_SitePermissionDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="SiteSettings"  Rights="ManageWeb" GroupId="WebTechnicalSiteCollectionGroupLinks">
+    <UrlAction Url="~site/_layouts/15/Orange.Common/Pages/Permissions/SitePermission.aspx" />
+  </CustomAction>
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_UserPermissionTitle;" Sequence="13" Description="$Resources:Orange.EPilot,CustomAction_UserPermissionDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="SiteSettings"  Rights="ManageWeb" GroupId="WebTechnicalSiteCollectionGroupLinks">
+    <UrlAction Url="~site/_layouts/15/Orange.Common/Pages/Permissions/UserPermission.aspx" />
+  </CustomAction>
+  
+  <CustomActionGroup Title="$Resources:Orange.EPilot,CustomActionGroup_WebFunctionnalGroupTitle;" Sequence="6" Description="$Resources:Orange.EPilot,CustomActionGroup_WebFunctionnalGroupDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="WebTechnicalGroupLinks" />
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_WebConfigTitle;" Sequence="12" Description="$Resources:Orange.EPilot,CustomAction_WebConfigDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="SiteSettings"  Rights="ManageWeb" GroupId="WebTechnicalGroupLinks">
+    <UrlAction Url="~site/_layouts/15/prjsetng.aspx" />
+  </CustomAction>
+  
+  <CustomAction Title="$Resources:Orange.EPilot,CustomAction_SiteConfigTitle;" Sequence="13" Description="$Resources:Orange.EPilot,CustomAction_SiteConfigDescription;" Location="Microsoft.SharePoint.SiteSettings" Id="SiteSettings"  Rights="ManageWeb" GroupId="WebTechnicalGroupLinks">
+    <UrlAction Url="~site/_layouts/15/Orange.Common/Pages/WebConfig.aspx" />
+  </CustomAction>
+
+  <CustomAction Title="Afficher le rubban" Sequence="13" Description="Afficher / Cacher le rubban" Location="Microsoft.SharePoint.StandardMenu" Id="SiteSettingsShowRibbon"  Rights="ManageWeb" GroupId="SiteActions">
+    <UrlAction Url="javascript:void(displayRibbon());"/>
+  </CustomAction>
+   
+</Elements>

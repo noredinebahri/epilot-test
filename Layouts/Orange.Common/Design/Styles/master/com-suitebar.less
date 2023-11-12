@@ -1,0 +1,136 @@
+﻿/************************************************************************************************************************************************
+                              SuiteBar - Barre haut de page
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+@suiteBarHeight: 60px;
+
+#suiteBar {
+    height: @suiteBarHeight;
+    font-family: @fontDefault;
+    background-color: @colorBlack;
+    /*  ZONE - LEFT  */
+    #suiteBarLeft {
+        background-color: @colorBlack;
+
+        .ms-tableRow {
+            > div {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            /*  Titre du module  */
+            .site-title {
+                color: @colorWhite;
+                padding-left: 20px;
+
+                span {
+                    line-height: @suiteBarHeight;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                    font-size: 22px;
+                    &.page-title{
+                        color:@colorOrangeDefault;
+
+                        span, a{
+                            display:none;
+                        }
+                    }
+                    
+                    text {
+                        margin-bottom:-5px;
+                    }                    
+                }
+                
+                #page-title-seleted-user-name {
+                    color:#AAA;
+                }
+                #page-title-seleted-user-agency {
+                    font-size:18px;
+                    color:#AAA;
+                }
+            }
+            /*  Barre séparation  */
+            .verticalLine {
+                width: 1px;
+                background-color: @colorWhite;
+            }
+            /*  Titre de la page  */
+            .page-title {
+                color: @colorWhite;
+
+                span {
+                    margin-left: 15px;
+                    display: inline-block;
+                    font-size: 22px;
+                    line-height: @suiteBarHeight;
+                }
+            }
+            /*Titre complémentaire*/
+            .additionalPageTitle {
+                text-align: right;
+                font-size: 1.2em;
+                padding-right: 10px;
+                background-color: @colorBlack;
+
+                a {
+                    color: @colorOrangeDefault;
+                }
+            }
+        }
+    }
+    /*  ZONE - RIGHT  */
+    #suiteBarRight {
+        background-color: @colorBlack;
+        vertical-align: middle;
+        /*  MENU - NOM  */
+        #welcomeMenuBox {
+
+            .ms-welcome-root > a.ms-core-menu-root, .ms-signInLink {
+                color: @colorWhite;
+                text-decoration: none;
+                height: 30px;
+                line-height: 25px;
+            }
+
+            .ms-welcome-hover > a.ms-core-menu-root,
+            .ms-signInLink:hover {
+                color: @colorGrey2;
+                text-decoration: none;
+            }
+
+            .ms-core-menu-root {
+                font-size: 18px;
+            }
+
+            .ms-core-menu-label {
+                font-size: 15px;
+            }
+        }
+        /*  MENU - SITE ACTION  */
+        #suiteBarButtons {
+            vertical-align: middle;
+
+            .ms-core-menu-label {
+                font-size: 15px;
+            }
+
+            .ms-siteactions-root > span > a.ms-core-menu-root {
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                padding: 8px 7px 6px 8px;
+            }
+        }
+        /*  PHOTO UTILISATEUR  */
+        .userPhoto img {
+            display: none;
+        }
+    }
+}
+
+
+
+
+

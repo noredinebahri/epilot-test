@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4840AF72-8DEE-4921-8163-9E75B25CB6B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orange.EPilot</RootNamespace>
+    <AssemblyName>Orange.EPilot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\Analytics.ascx.cs">
+      <DependentUpon>Analytics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\Analytics.ascx.designer.cs">
+      <DependentUpon>Analytics.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\GlobalProperties.ascx.cs">
+      <DependentUpon>GlobalProperties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\GlobalProperties.ascx.designer.cs">
+      <DependentUpon>GlobalProperties.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\NavigationSideBar.ascx.cs">
+      <DependentUpon>NavigationSideBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\NavigationSideBar.ascx.designer.cs">
+      <DependentUpon>NavigationSideBar.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\SiteNavigationTiles.ascx.cs">
+      <DependentUpon>SiteNavigationTiles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\SiteNavigationTiles.ascx.designer.cs">
+      <DependentUpon>SiteNavigationTiles.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\ReportIframe.ascx.cs">
+      <DependentUpon>ReportIframe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Orange.Common\ReportIframe.ascx.designer.cs">
+      <DependentUpon>ReportIframe.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Handlers\GlobalInfo.cs" />
+    <Compile Include="Layouts\Orange.Common\Pages\Analytics\AnalyticsConfig.aspx.cs">
+      <DependentUpon>AnalyticsConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Analytics\AnalyticsConfig.aspx.designer.cs">
+      <DependentUpon>AnalyticsConfig.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Desabonnement.aspx.cs">
+      <DependentUpon>Desabonnement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Desabonnement.aspx.designer.cs">
+      <DependentUpon>Desabonnement.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Permissions\UserPermission.aspx.cs">
+      <DependentUpon>UserPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Permissions\UserPermission.aspx.designer.cs">
+      <DependentUpon>UserPermission.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Permissions\SitePermission.aspx.cs">
+      <DependentUpon>SitePermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Permissions\SitePermission.aspx.designer.cs">
+      <DependentUpon>SitePermission.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\SiteConfig.aspx.cs">
+      <DependentUpon>SiteConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\SiteConfig.aspx.designer.cs">
+      <DependentUpon>SiteConfig.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Telechargement\AddNew.aspx.cs">
+      <DependentUpon>AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\Telechargement\AddNew.aspx.designer.cs">
+      <DependentUpon>AddNew.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\WebConfig.aspx.cs">
+      <DependentUpon>WebConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Orange.Common\Pages\WebConfig.aspx.designer.cs">
+      <DependentUpon>WebConfig.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Home\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Home\Home.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Iframe_ContextEPilot\Iframe_ContextEPilot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Orange.EPilot.Designer.cs">
+      <DependentUpon>Orange.EPilot.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="WebParts\Iframe_SSRS\Iframe_SSRS.cs" />
+    <Compile Include="WebParts\Iframe_SSRS\Iframe_SSRSUserControl.ascx.cs">
+      <DependentUpon>Iframe_SSRSUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Iframe_SSRS\Iframe_SSRSUserControl.ascx.designer.cs">
+      <DependentUpon>Iframe_SSRSUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{777b7ff3-ba58-480f-ad6c-42c35e8772a7}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Site_WebParts\Site_WebParts.feature">
+      <FeatureId>{97440a6d-2a51-4b66-a9e3-8fa6ce9c47ac}</FeatureId>
+    </None>
+    <None Include="Features\Site_ContentTypes\Site_ContentTypes.feature">
+      <FeatureId>{ba9d1bec-fb3f-495e-8c41-4995e0bbe93a}</FeatureId>
+    </None>
+    <None Include="Features\Site_Branding\Site_Branding.feature">
+      <FeatureId>{b30e28ec-7bac-4d86-8153-eb010bb23f4f}</FeatureId>
+    </None>
+    <None Include="Features\Site_Administration\Site_Administration.feature">
+      <FeatureId>{b219b0de-acac-4627-8bf4-4da1c31e6498}</FeatureId>
+    </None>
+    <None Include="Layouts\Orange.Common\Design\Fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\Orange.Common\Design\Fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\Orange.Common\Design\Fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Layouts\Orange.Common\Design\Fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cache.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cache.min.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cookies.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-moment.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-animate.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-sanitize.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-touch.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-comments.min.js.map" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-admin-header.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-error.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-recherche-client-panel.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-telechargement.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-aide.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-bloc-note.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-button.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-loading.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-message-info-admin.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-modal.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-notification.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-override-user.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-recherche-client.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-resultat-import.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-schema-form.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-selection-period.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-switch.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-tabs.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-topnav-alerts.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-uigrid.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\def-common-variable.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\components\com-hierarchie-navigation.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\com-nav-left.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\com-nav-top.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\global.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\home-nav.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\sharepoint.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\com-suitebar.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\master\sqlserver.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\pages\template-2-columns.less" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-theme.css.map" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-theme.min.css.map" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap.css.map" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap.min.css.map" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.eot" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.ttf" />
+    <None Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.woff" />
+    <None Include="Layouts\Orange.Common\Handlers\GlobalInfo.ashx" />
+    <None Include="Module\StyleLibrary\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{16a047de-e4fb-4ee3-97bc-2c9446062689}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Home\Home.webpart" />
+    <None Include="WebParts\Home\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c981f1e2-66b6-4ac2-aef7-e462c37bd364}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Iframe_ContextEPilot\Iframe_ContextEPilot.webpart" />
+    <None Include="WebParts\Iframe_ContextEPilot\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{17b1b123-db5a-4cea-bcfb-2b28f2444051}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee229870-8913-4682-adeb-c2bf1f208dec}</SharePointProjectItemId>
+    </None>
+    <None Include="Module\CustomAction\CustomActionSiteAdministration\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ffa33375-f23b-4c20-8a01-ea2800aa6f9c}</SharePointProjectItemId>
+    </None>
+    <None Include="Module\Masterpage\Orange.Epilot3.master" />
+    <None Include="Module\Masterpage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8d058b89-dfd1-405d-83f6-6b291fab1442}</SharePointProjectItemId>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{c1831a13-72f6-4436-8602-3c7d22929648}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{757b6975-bb30-4792-96d3-b4d6a707d61d}</SharePointProjectItemId>
+    </None>
+    <None Include="SiteDefinition\Orange_EPilot\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{98c948e4-7a83-43eb-ba2b-2c6e0ae7a740}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Iframe_SSRS\Iframe_SSRS.webpart" />
+    <None Include="WebParts\Iframe_SSRS\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b33d8ed6-9b67-4685-9f2e-64b1853705fd}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\Orange.Common\Analytics.ascx" />
+    <Content Include="CONTROLTEMPLATES\Orange.Common\GlobalProperties.ascx" />
+    <Content Include="CONTROLTEMPLATES\Orange.Common\NavigationSideBar.ascx" />
+    <Content Include="CONTROLTEMPLATES\Orange.Common\SiteNavigationTiles.ascx" />
+    <Content Include="CONTROLTEMPLATES\Orange.Common\ReportIframe.ascx" />
+    <Content Include="Features\Site_WebParts\Site_WebParts.Template.xml">
+      <DependentUpon>Site_WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Site_ContentTypes\Site_ContentTypes.Template.xml">
+      <DependentUpon>Site_ContentTypes.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\Site_Branding\Site_Branding.Template.xml">
+      <DependentUpon>Site_Branding.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layouts\Orange.Common\Design\Images\ajax-loader.gif" />
+    <Content Include="Layouts\Orange.Common\Design\Images\arrow-down.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\arrow-up.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\arrows.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\btn_collapse_30_30.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\btn_extend_30_30.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\calendarpick.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\doublecheck.svg" />
+    <Content Include="Layouts\Orange.Common\Design\Images\doublecheckvecto.svg" />
+    <Content Include="Layouts\Orange.Common\Design\Images\export_btn.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\export_btn_inactive.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\favicon.ico" />
+    <Content Include="Layouts\Orange.Common\Design\Images\import_btn.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\import_btn_inactive.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_action_commerciale.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_caparc.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_dashboard.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_dashboard_client.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_environnement_vente.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_gestion_ciblages.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_home.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_people.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_perf_commerciale.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_pie.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\menu_rapport.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\pmd_link.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\recherche_icn.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\Aide\seringue.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\specificactions-icon-white.png" />
+    <Content Include="Layouts\Orange.Common\Design\Images\specificactions-icon.png" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\desabonnementController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\homeNavController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\infosPopupNotCloseableController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\notificationCommonPopupController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\confirmPopupController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\infosPopupController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\aide\aideController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\aide\aideVideoPopupController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\blocnote\blocNoteController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\homeController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\rechercheClient\rechercheClientController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\telechargement\telechargementController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\telechargement\telechargementAddNewController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\enterEvent.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\grid\dateFormatter.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\grid\datepickerPopup.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\messages\messageInfoAdmin.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\messages\msgWarning.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\rechercheClient.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\telechargement.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\aide.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\blocNote.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\baseCommonController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\basePopupCommonController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\common-controllers.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\common-controllers.min.js">
+      <DependentUpon>common-controllers.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\displayTopController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\overrideuser\overrideUserController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\buttons\addButton.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\buttons\exportButton.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\buttons\importButton.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common-directives.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common-directives.min.js">
+      <DependentUpon>common-directives.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\errorHttp.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\hierarchyNavigation.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\grid\itemsCounter.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\grid\itemsPerPage.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\jqueryAutocomplete.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\loadingSpinner.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\messages\msgSuccess.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\common\multiSelect.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\grid\pagination.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\notification.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\panel\overrideUser.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\selector\agencySelector.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\selector\anneeSelector.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\selector\moduleSelector.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\directives\selector\periodSelector.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\controllers\panels\notification\notificationCommonController.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\commonApp.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\cacheService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\homeNavService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\homeService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\blocNoteService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\common-services.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\common-services.min.js">
+      <DependentUpon>common-services.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\rechercheClientService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\notificationCommonService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\statistiqueService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\telechargementService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\tutorielService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\services\userService.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\activeTemplate.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\infosPopupNotCloseable.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\notificationPopup.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\confirmPopup.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\datepicker.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\infosPopup.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\rechercheClient.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\telechargement.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\blocNote.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\gridPopup.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\aide.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\import.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\grid\rowTemplate.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\hierarchyNavigation.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\notification.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\panels\overrideUser.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\periodSelector.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\aide\aide-video.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\app\views\sectionTitle.html" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\common-global.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\common-global.min.js">
+      <DependentUpon>common-global.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\common-tools.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-aria.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cache.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cache.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cookies.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-cookies.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-datepicker.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-local-fr.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-material.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-messages.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-spinners.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angularjs-chips.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\colorPicker\bootstrap-colorpicker-module.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\colorPicker\bootstrap-colorpicker-module.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\common-plugins-angular.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\common-plugins-angular.min.js">
+      <DependentUpon>common-plugins-angular.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\contextMenu.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ng-csv.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ng-csv.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\rzslider.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\textAngular\textAngular-rangy.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\textAngular\textAngular-sanitize.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\textAngular\textAngular.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\wisiwig\wysiwyg.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\bootstrap-menu.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\Chart.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\chartjs-plugin-datalabels.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\common-plugins.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\common-plugins.min.js">
+      <DependentUpon>common-plugins.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\enjoyhint\enjoyhint.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\enjoyhint\jquery.enjoyhint.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\enjoyhint\kinetic.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\fontawesome-all.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery.gridster.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery.scrollbar.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\tableHeadFixer.js" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-admin-header.css">
+      <DependentUpon>com-admin-header.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-aide.css">
+      <DependentUpon>com-aide.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-bloc-note.css">
+      <DependentUpon>com-bloc-note.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-button.css">
+      <DependentUpon>com-button.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-error.css">
+      <DependentUpon>com-error.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-hierarchie-navigation.css">
+      <DependentUpon>com-hierarchie-navigation.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-loading.css">
+      <DependentUpon>com-loading.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-message-info-admin.css">
+      <DependentUpon>com-message-info-admin.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-modal.css">
+      <DependentUpon>com-modal.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-notification.css">
+      <DependentUpon>com-notification.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-override-user.css">
+      <DependentUpon>com-override-user.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-recherche-client-panel.css">
+      <DependentUpon>com-recherche-client-panel.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-recherche-client.css">
+      <DependentUpon>com-recherche-client.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-resultat-import.css">
+      <DependentUpon>com-resultat-import.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-schema-form.css">
+      <DependentUpon>com-schema-form.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-selection-period.css">
+      <DependentUpon>com-selection-period.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-switch.css">
+      <DependentUpon>com-switch.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-tabs.css">
+      <DependentUpon>com-tabs.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-telechargement.css">
+      <DependentUpon>com-telechargement.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-topnav-alerts.css">
+      <DependentUpon>com-topnav-alerts.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\components\com-uigrid.css">
+      <DependentUpon>com-uigrid.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\epilot-common.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\epilot-common.min.css">
+      <DependentUpon>epilot-common.css</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\com-nav-left.css">
+      <DependentUpon>com-nav-left.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\com-nav-top.css">
+      <DependentUpon>com-nav-top.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\com-suitebar.css">
+      <DependentUpon>com-suitebar.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\global.css">
+      <DependentUpon>global.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\home-nav.css">
+      <DependentUpon>home-nav.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\sharepoint.css">
+      <DependentUpon>sharepoint.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\master\sqlserver.css">
+      <DependentUpon>sqlserver.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\pages\template-2-columns.css">
+      <DependentUpon>template-2-columns.less</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\angular-datepicker.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\angular-material.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\angular-ui-tree.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-ui-tree.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\dynamic-number.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\dynamic-number.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ng-file-upload.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ng-file-upload.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ng-tags-input.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ui-bootstrap-tpls-2.5.0.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ui-bootstrap-tpls-2.5.0.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\common-init.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-animate.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-animate.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-moment.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-moment.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-sanitize.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-sanitize.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-touch.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular-touch.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\angular.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\bootstrap-decorator.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\bootstrap-decorator.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\csv.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\fileSaver.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ObjectPath.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\pdfmake.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\schema-form.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\schema-form.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\tv4.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\tv4.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ui-grid.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\ui-grid.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\angular\vfs_fonts.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\bootstrap-datepicker.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\bootstrap-table-sort.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\bootstrap.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\bootstrap.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-1.10.2.intellisense.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-1.10.2.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-1.10.2.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-comments.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-comments.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-multiselect.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery-ui.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\jquery.linq.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\moment-with-locales.js" />
+    <Content Include="Layouts\Orange.Common\Design\Scripts\plugins\moment-with-locales.min.js" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\angularjs-chips.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-theme.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-theme.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-datepicker.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap-table-expandable.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\bootstrap.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\Chart.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\colorPicker\colorpicker.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\colorPicker\colorpicker.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\common-plugins.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\common-plugins.min.css">
+      <DependentUpon>common-plugins.css</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\font-awesome-animation.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-icons_222222_256x240.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-icons_454545_256x240.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-icons_888888_256x240.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery-comments.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery-multiselect.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery-ui.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery.enjoyhint.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery.gridster.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\jquery.scrollbar.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\ng-tags-input.bootstrap.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\ng-tags-input.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\rzslider.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\textAngular\textAngular.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\ui-grid.svg" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\editor.min.css" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\header-bg.gif" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\header-bg.orig.gif" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\icons.old.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\icons.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\logo.png" />
+    <Content Include="Layouts\Orange.Common\Design\Styles\plugins\wisiwig\images\resize.gif" />
+    <Content Include="Layouts\Orange.Common\Pages\Analytics\AnalyticsConfig.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Desabonnement.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Home.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Permissions\UserPermission.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Permissions\SitePermission.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\SiteConfig.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Help.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\Telechargement\AddNew.aspx" />
+    <Content Include="Layouts\Orange.Common\Pages\WebConfig.aspx" />
+    <Content Include="Module\StyleLibrary\Elements.xml" />
+    <Content Include="Module\StyleLibrary\Tutoriel.js" />
+    <Content Include="WebParts\Home\Elements.xml" />
+    <Content Include="WebParts\Home\Home.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Home.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\Iframe_ContextEPilot\Elements.xml" />
+    <Content Include="Module\Masterpage\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\Orange.EPilot.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Orange.EPilot.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="SiteDefinition\Orange_EPilot\default.aspx" />
+    <Content Include="SiteDefinition\Orange_EPilot\onet.xml" />
+    <Content Include="SiteDefinition\Orange_EPilot\webtemp_Orange_EPilot.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebParts\Iframe_SSRS\Elements.xml" />
+    <Content Include="WebParts\Iframe_SSRS\Iframe_SSRSUserControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Site_Administration\Site_Administration.Template.xml">
+      <DependentUpon>Site_Administration.feature</DependentUpon>
+    </Content>
+    <Content Include="Module\CustomAction\CustomActionSiteAdministration\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orange.Common.Library\Orange.Common.Library.csproj">
+      <Project>{badb479d-d5d7-4e25-838f-7d1a3c0f2325}</Project>
+      <Name>Orange.Common.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\Orange.Common\Design\Scripts\app\directives\controls\" />
+    <Folder Include="Lists\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

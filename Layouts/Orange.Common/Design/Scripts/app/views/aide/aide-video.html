@@ -1,0 +1,18 @@
+﻿<ng-form name="vm.aidevideoPopup" novalidate>
+    <div class="modal-header" style="background-color:#f60">
+        <h4 class="modal-title"><i class="far fa-gem"></i>{{vm.videoTitre}}</h4>
+        <a href="#" class="modal-close" ng-click="$close()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="modal-body" id="contentRow" style="padding:0">
+        <video controls="controls" src="{{vm.videoUrl}}" autoplay="true" style="width:100%">
+            La vidéo n'est pas disponible sur ce navigateur'
+        </video>
+
+        <div class="clear"></div>
+    </div>
+
+   
+</ng-form>

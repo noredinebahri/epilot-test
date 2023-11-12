@@ -1,0 +1,49 @@
+table.table-expandable {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+table.table-expandable > thead {
+    background-color: #737470; 
+    color: #fff;
+}
+
+table.table-expandable > tbody > tr:nth-child(odd) {
+    background-color:  #bfbfbf;    
+    cursor: pointer;
+}
+
+table.table-expandable > tbody > tr:nth-child(odd) > td.client-name {
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+table.table-expandable > tbody > tr:nth-child(even) > td {
+    padding: 0;
+}
+
+table.table-expandable > thead > tr > th {
+    text-transform: uppercase;
+	font-size: 13px;
+	text-align: center;
+    border-right: 1px solid #fff;
+    border-bottom: 0px solid #ddd;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow {
+    background:transparent url('/_layouts/15/Orange.Common/Design/Images/arrows.png') no-repeat scroll 0px -16px; width:16px; height:16px; display:block;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow.up {
+    background-position:0px 0px;
+}
+
+table.table-striped {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+table.table-striped > tbody > tr > td {
+    border-right: 1px solid #fff;
+}

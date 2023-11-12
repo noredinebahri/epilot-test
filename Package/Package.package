@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c1831a13-72f6-4436-8602-3c7d22929648" solutionId="c1831a13-72f6-4436-8602-3c7d22929648" resetWebServer="false" sharePointProductVersion="15.0" name="Orange.EPilot" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="Orange.Common.Library.dll" deploymentTarget="WebApplication" projectPath="..\Orange.Common.Library\Orange.Common.Library.csproj" />
+    <customAssembly location="Microsoft.Practices.Unity.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll" />
+    <customAssembly location="Microsoft.Practices.Unity.Configuration.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll" />
+    <customAssembly location="Microsoft.Practices.Unity.RegistrationByConvention.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+    <customAssembly location="System.Net.Http.Formatting.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" />
+    <customAssembly location="ClosedXML.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\ClosedXML.0.80.1\lib\net40-client\ClosedXML.dll" />
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="WebApplication" sourcePath="..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="b219b0de-acac-4627-8bf4-4da1c31e6498" />
+    <featureReference itemId="b30e28ec-7bac-4d86-8153-eb010bb23f4f" />
+    <featureReference itemId="ba9d1bec-fb3f-495e-8c41-4995e0bbe93a" />
+    <featureReference itemId="97440a6d-2a51-4b66-a9e3-8fa6ce9c47ac" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="757b6975-bb30-4792-96d3-b4d6a707d61d" />
+    <projectItemReference itemId="ee229870-8913-4682-adeb-c2bf1f208dec" />
+    <projectItemReference itemId="98c948e4-7a83-43eb-ba2b-2c6e0ae7a740" />
+    <projectItemReference itemId="777b7ff3-ba58-480f-ad6c-42c35e8772a7" />
+    <projectItemReference itemId="ffa33375-f23b-4c20-8a01-ea2800aa6f9c" />
+  </projectItems>
+</package>

@@ -1,0 +1,174 @@
+﻿/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-recherche-client-panel .nav-section-main {
+  background-color: #eee !important;
+}
+.com-recherche-client-panel .nav-section-main .recherche-acteur-result h4 {
+  color: #FF6600;
+}
+.com-recherche-client-panel .nav-section-main .recherche-acteur-result ul li {
+  color: #000000;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.com-recherche-client-panel .nav-section-main .recherche-acteur-result ul li:hover {
+  color: #000000;
+}
+.com-recherche-client-panel .nav-section-main .recherche-produit-result h4 {
+  color: #FF6600;
+}
+.com-recherche-client-panel .nav-section-main .recherche-produit-result ul li {
+  color: #000000;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.com-recherche-client-panel .nav-section-main .recherche-produit-result ul li:hover {
+  color: #000000;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-details h4 {
+  color: #FF6600;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-details ul li {
+  color: #000000;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-details ul li:hover {
+  color: #000000;
+}
+.com-recherche-client-panel .nav-section-main #recherche-client-parc-not-exist {
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  height: 250px;
+}
+.com-recherche-client-panel .nav-section-main .form-control {
+  border-radius: 3px !important;
+}
+.com-recherche-client-panel .nav-section-main h1 {
+  color: #000;
+}
+.com-recherche-client-panel .nav-section-main h1 span {
+  color: #f60;
+}
+.com-recherche-client-panel .nav-section-main ul li {
+  color: gray;
+  border-bottom: none;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.com-recherche-client-panel .nav-section-main ul li input {
+  margin-top: 20px;
+  width: 80%;
+}
+.com-recherche-client-panel .nav-section-main ul li:hover {
+  color: gray;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-domaine-element {
+  margin: 0 !important;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-domaine-element .recherche-client-domaine-result:hover,
+.com-recherche-client-panel .nav-section-main .recherche-client-domaine-element .recherche-client-domaine-result:focus,
+.com-recherche-client-panel .nav-section-main .recherche-client-domaine-element .recherche-client-domaine-result:active {
+  color: #FFFFFF !important;
+}
+.com-recherche-client-panel .nav-section-main .recherche-client-domaine-element .recherche-client-domaine-result span {
+  margin-left: 5px;
+}
+.com-recherche-client-panel .nav-section-main .parc-list {
+  height: 200px;
+  overflow: auto;
+  scrollbar-width: thin;
+  background-color: white;
+}
+.com-recherche-client-panel .nav-section-main .parc-list ul li {
+  margin: 0 !important;
+}
+.com-recherche-client-panel .nav-section-main .parc-list ul li span {
+  color: black;
+  font-size: 12px;
+}
+.com-recherche-client-panel .nav-section-main .rch-btn-wrapper {
+  text-align: left;
+  margin-left: 42px;
+}
+.com-recherche-client-panel .nav-section-main .rch-btn-wrapper .btn {
+  width: 250px;
+}
+.nav-pills > li.active > .recherche-client-domaine-result,
+.nav-pills > li.active > .recherche-client-domaine-result:hover,
+.nav-pills > li.active > .recherche-client-domaine-result:focus {
+  background-color: #f60 !important;
+}
+.nav-pills > li > .recherche-client-domaine-result {
+  background-color: white;
+}
+.nav > li > .recherche-client-domaine-result:hover,
+.nav > li > .recherche-client-domaine-result:focus {
+  text-decoration: none;
+  background-color: #f60 !important;
+  color: white;
+}
+.uib-typeahead-match {
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.uib-typeahead-match a {
+  font-size: small;
+}
+.recherche-client-toggle-view {
+  display: inline-flex;
+  margin-top: 20px;
+}
+.recherche-client-toggle-view .toggle-view-left,
+.recherche-client-toggle-view .toggle-view-right,
+.recherche-client-toggle-view .toggle-view-middle {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  background-image: linear-gradient(#fff, #fff, #fff);
+}
+.recherche-client-toggle-view .toggle-view-left.active,
+.recherche-client-toggle-view .toggle-view-right.active,
+.recherche-client-toggle-view .toggle-view-middle.active,
+.recherche-client-toggle-view .toggle-view-left:hover,
+.recherche-client-toggle-view .toggle-view-right:hover,
+.recherche-client-toggle-view .toggle-view-middle:hover {
+  background-image: linear-gradient(#f60, #f60, #f60);
+  color: #FFFFFF;
+}
+.recherche-client-toggle-view .toggle-view-left:hover,
+.recherche-client-toggle-view .toggle-view-right:hover,
+.recherche-client-toggle-view .toggle-view-middle:hover {
+  cursor: pointer;
+}
+.recherche-client-toggle-view .toggle-view-left {
+  width: 100px !important;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.recherche-client-toggle-view .toggle-view-middle {
+  width: 100px !important;
+}
+.recherche-client-toggle-view .toggle-view-right {
+  width: 100px !important;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

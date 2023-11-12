@@ -1,0 +1,113 @@
+﻿<div ng-controller="telechargementController as tp" ng-cloak>
+    <div class="telechargement-top-button"
+        ng-class="{ 'active' : tp.Panel.Open && (tp.panelCurrent == tp.Panel.Name) }"
+         ng-click="$event.stopPropagation(); tp.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fas fa-download"></span>
+                <span class="fa-layers-counter fa-2x" ng-if="tp.telechargements.filter(tp.Filtres.StatusEnCours).length > 0">
+                    <span>{{tp.telechargements.filter(tp.Filtres.StatusEnCours).length}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="com-hierarchie-navigation com-telechargement ms-dialogHidden"
+         ng-class="{'open' : tp.Panel.Open,  'close' : !tp.Panel.Open}"
+         ng-if="(tp.panelCurrent == tp.Panel.Name)">
+        <div ng-if="tp.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header" title="Mes téléchargements">
+                    <div class="txtContainer">
+                        <span>Mes téléchargements</span>
+                        <span  style="margin-left:180px" ng-click="tp.initializePage()" title="Refraichir">
+                            <i class="fas fa-sync-alt"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-section-main scrollbar-dynamic" data-jquery-scrollbar="tp.jQueryScrollbarOptions">
+                <h1>
+                    <i class="fas fa-download"></i>  Téléchargements en attente
+                </h1>
+                <ul ng-if="(tp.telechargements  | filter: tp.Filtres.StatusEnAttente) != 0">
+                    <li ng-repeat="item in telechargementEnCours = tp.telechargements  | filter: tp.Filtres.StatusEnAttente" class="disabled">
+                        <i class="fas fa-clock"></i>
+                        <span ng-bind="item.Nom"></span>
+                        <span id="removeFile" ng-click="tp.delete(item,true)" title="Supprimer">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span style="float:right">
+                            {{::item.DateCreation | date:'dd/MM/yyyy'}}
+                        </span>
+
+                    </li>
+                </ul>
+                <div ng-if="(tp.telechargements  | filter: tp.Filtres.StatusEnAttente) == 0" class="error-search">
+                    Aucun téléchargement en attente.
+                </div>
+                <h1>
+                    <i class="fas fa-download"></i> Téléchargements en cours
+                </h1>
+                <ul ng-if="(tp.telechargements  | filter: tp.Filtres.StatusEnCours) != 0">
+                    <li ng-repeat="item in telechargementEnCours = tp.telechargements  | filter: tp.Filtres.StatusEnCours" class="disabled">
+                        <i class="fas fa-spinner fa-spin fa-fw"></i>
+                        <span ng-bind="item.Nom"></span>
+                        <span id="removeFile" ng-click="tp.delete(item,true)" title="Supprimer">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span style="float: right"> {{::item.DateCreation | date:'dd/MM/yyyy'}}
+                        </span>
+
+                    </li>
+                </ul>
+                <div ng-if="(tp.telechargements  | filter: tp.Filtres.StatusEnCours) == 0" class="error-search">
+                    Aucun téléchargement en cours.
+                </div>
+            </div>
+            <div class="nav-section-main disponible scrollbar-dynamic" data-jquery-scrollbar="tp.jQueryScrollbarOptions">
+                <h1>
+                    <i class="fas fa-download"></i>  Téléchargements terminés
+                </h1>
+                <ul ng-if="(tp.telechargements  | filter: tp.Filtres.StatusDisponible) != 0">
+                    <li ng-repeat="item in telechargementDisponible = tp.telechargements  | filter: tp.Filtres.StatusDisponible" ng-class="{ 'error' : item.StatusId == 3 }">
+                        <span>
+                            <i class="far fa-check-circle" ng-if="item.StatusId == 2"></i>
+                            <i class="fas fa-redo-alt" ng-if="item.StatusId == 3"></i>
+                        </span>
+                        <span ng-bind="item.Nom| limitTo: 30" ng-click="tp.openTelechargement(item)" title="{{item.Nom}}"></span>                     
+                        <span ng-if="item.Nom.length > 30">...</span>
+                        <span id="removeCompletedFile" ng-click="tp.delete(item,false)" title="Supprimer" ng-if="item.StatusId == 3">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span style="float: right">{{::item.DateCreation | date:'dd/MM/yyyy'}}</span>
+                    </li>
+                </ul>
+                <div ng-if="(tp.telechargements  | filter: tp.Filtres.StatusDisponible) == 0" class="error-search">
+                    Aucun téléchargement disponible.
+                </div>
+                <div class="warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        Pour des raisons de pertinence des exports, les fichiers téléchargés ne seront disponibles que pour une durée de 30 jours.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!tp.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header" title="Téléchargements">&nbsp;</div>
+            </div>
+            <div class="nav-section-main"></div>
+        </div>
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); tp.Panel.Display()">
+            <div ng-if="tp.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="tp.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿.com-override-user .override-user-content {
+  color: #000;
+}
+.com-override-user .override-user-selected {
+  color: #FFF;
+  margin-top: 25px;
+}
+.com-override-user .override-user-selected .title {
+  font-size: 16px;
+  font-weight: bold;
+}

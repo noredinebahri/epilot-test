@@ -1,0 +1,86 @@
+﻿@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-telechargement {
+    .nav-section-main {
+        font-size: 14px;
+        padding: 0px 15px;
+        background-color: #404040;
+
+        h1 {
+            font-size: 21px;
+            color: @colorWhite;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 5px;
+
+            li {
+                cursor: pointer;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid @colorGrey11;
+                 #removeFile {
+                  display: none;
+                   margin-left: 10px;
+                   float:right
+                 }
+                 #removeCompletedFile {
+                  display: none;
+                   margin-left: 10px;
+                   float:right
+                 }
+                &:hover {
+                    color: @colorOrangeDefault;
+                    #removeFile {
+                      color: @colorWhite;
+                      display: inline;
+                  }
+                  #removeCompletedFile {
+                      color: @colorRed;
+                      display: inline;
+                  }
+                }
+
+                &.disabled {
+                    cursor: default;
+                }
+
+                &.error {
+                    color: @colorRed;
+                }
+            }
+        }
+
+        .scrollbar-dynamic {
+            min-height: ~"calc(30vh)" !important;
+            max-height: ~"calc(30vh)" !important;
+        }
+
+        &.disponible {
+            background-color: #EEE;
+            color: @colorBlack;
+
+            h1 {
+                color: @colorBlack;
+            }
+
+            .scrollbar-dynamic {
+                min-height: ~"calc(70vh - 78px)" !important;
+                max-height: ~"calc(70vh - 78px)" !important;
+            }
+
+
+            .warning {
+                text-align: center;
+                padding: 15px;
+
+                svg {
+                    color: @colorGrey11;
+                    font-size: 60px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+﻿/************************************************************************************************************************************************
+                                                            TOP navigation (tuiles)
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+#suiteBar .com-nav-top {
+  background-color: #4bb4e6;
+  width: 50px;
+  cursor: pointer;
+}
+#suiteBar .com-nav-top .menu-icon {
+  text-align: center;
+}
+#suiteBar .com-nav-top .tiles {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  z-index: 50;
+  /*max-height: calc(100vh - 100px) !important;*/
+  overflow: hidden;
+  max-width: 540px;
+  min-width: 208px;
+  padding: 3px;
+  list-style-type: none;
+  background-color: #eee;
+  display: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.29);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.29);
+}
+#suiteBar .com-nav-top .tiles::before {
+  border-bottom: 25px solid #F2F2F2;
+  border-right: 25px solid transparent;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: -30px;
+  width: 0;
+}
+#suiteBar .com-nav-top .tiles li {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin: 3px;
+}
+#suiteBar .com-nav-top .tiles li a.navTile {
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+}
+#suiteBar .com-nav-top .tiles li a.navTile:visited {
+  color: inherit;
+}
+#suiteBar .com-nav-top .tiles li a.navTile .navTile-background {
+  height: 100%;
+  width: 100%;
+  display: table;
+  padding-top: 18px;
+  color: #FFFFFF;
+}
+#suiteBar .com-nav-top .tiles li a.navTile .navTile-background:hover,
+#suiteBar .com-nav-top .tiles li a.navTile .navTile-background.active {
+  background-color: #FFFFFF;
+  color: inherit;
+}
+#suiteBar .com-nav-top .tiles li a.navTile .navTile-background p {
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  line-height: normal;
+}
+#suiteBar .com-nav-top .tiles li a.navTile .navTile-background p svg {
+  font-size: 30px;
+  width: 90px;
+  margin-bottom: 10px;
+}

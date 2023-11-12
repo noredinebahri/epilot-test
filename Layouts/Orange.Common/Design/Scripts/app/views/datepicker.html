@@ -1,0 +1,27 @@
+<div class="form-group {{form.htmlClass}}" ng-class="{'has-error': form.disableErrorState !== true && hasError(), 'has-success': form.disableSuccessState !== true && hasSuccess()}">
+    <label class="control-label" ng-show="showTitle()">{{form.title}}</label>
+    
+    <p class="input-group">
+        <input type="text" class="form-control {{form.fieldHtmlClass}}"    
+               ng-show="form.key"
+               date-formatter
+               sf-field-model=""
+               name="{{form.key.slice(-1)[0]}}"
+               id="{{form.key.slice(-1)[0]}}" 
+               uib-datepicker-popup="dd/MM/yyyy"
+               ng-model="$$value$$"
+               is-open="datepicker.opened"
+               datepicker-options="dateOptions"
+               ng-disabled="form.readonly"
+               schema-validate="form"
+               sf-changed="form" 
+               placeholder="{{form.placeholder}}"
+               close-text="Close"
+               on-open-focus="false"
+               ng-click="datepicker.opened = true"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="datepicker.opened = true"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+    </p>
+    <span class="help-block" ng-show="(hasError() && errorMessage(schemaError()))">Format jj/mm/aaaa</span>
+</div>

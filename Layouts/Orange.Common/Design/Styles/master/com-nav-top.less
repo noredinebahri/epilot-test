@@ -1,0 +1,93 @@
+﻿/************************************************************************************************************************************************
+                                                            TOP navigation (tuiles)
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+#suiteBar .com-nav-top {
+    background-color: #4bb4e6;
+    width: 50px;
+    cursor: pointer;
+
+    .menu-icon {
+        text-align: center;
+    }
+
+    .tiles {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        z-index: 50;
+        /*max-height: calc(100vh - 100px) !important;*/
+        overflow: hidden;
+        max-width: 540px;
+        min-width: 208px;
+        padding: 3px;
+        list-style-type: none;
+        background-color: #eee;
+        display: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.29);
+        box-shadow: 5px 5px 5px rgba(0,0,0,.29);
+
+        &::before {
+            border-bottom: 25px solid @colorGrey1;
+            border-right: 25px solid transparent;
+            content: "";
+            display: block;
+            height: 30px;
+            left: 0;
+            position: absolute;
+            top: -30px;
+            width: 0;
+        }
+
+        li {
+            height: 100px;
+            width: 100px;
+            float: left;
+            margin: 3px;
+
+            a.navTile {
+                font-weight: bold;
+                font-size: 12px;
+                color: inherit;
+
+
+                &:visited {
+                    color: inherit;
+                }
+
+                .navTile-background {
+                    height: 100%;
+                    width: 100%;
+                    display: table;
+                    padding-top: 18px;
+                    color: @colorWhite;
+
+
+                    &:hover, &.active {
+                        background-color: @colorWhite;
+                        color: inherit;
+                    }
+
+                    p {
+                        display: table-cell;
+                        vertical-align: top;
+                        text-align: center;
+                        line-height: normal;
+
+                        svg {
+                            font-size: 30px;
+                            width: 90px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,38 @@
+﻿<form name="genericForm" ng-submit="vm.onSubmit(genericForm)">
+    <div class="modal-header">
+        <h4 class="modal-title" ng-bind="vm.title"></h4>
+        <a href="#" class="modal-close" ng-click="$close()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="modal-body">
+        <div name="gripPopupForm"
+             sf-schema="vm.schema"
+             sf-form="vm.form"
+             sf-model="vm.entity">
+        </div>
+        <div class="col-xs-12 alert alert-info" ng-show="vm.info" ng-bind="vm.info"></div>
+        <div class="col-xs-12 alert alert-warning" ng-show="vm.warning" ng-bind="vm.warning"></div>
+        <div class="col-xs-12 alert alert-danger" ng-show="vm.error" ng-bind="vm.error" id="formError"></div>
+    </div>
+
+    <div class="modal-footer" style="clear:both;">
+        <a class="com-button type-1 tertiary pull-left" href="#" ng-click="vm.onDelete()" ng-if="vm.showDeleteButton">
+            <i class="fa fa-trash" aria-hidden="true"></i> Supprimer
+        </a>
+
+        <a class="btn btn-grey-default btn-desactivate" href="#" ng-click="vm.otherButtonAction()" ng-if="vm.showOtherButton">
+            {{vm.otherButtonName}}
+        </a>
+        
+        <a class="com-button type-1 secondary" href="#" ng-click="$close()">
+            <i class="fa fa-undo" aria-hidden="true"></i> Annuler
+        </a>
+        <a class="com-button type-1 primary" href="#" ng-click="vm.onSubmit(genericForm)" ng-disabled="vm.disabledSave">
+            <i class="fa fa-save" aria-hidden="true"></i> Enregistrer
+        </a>
+    </div>
+
+    <div class="clear"></div>
+</form>

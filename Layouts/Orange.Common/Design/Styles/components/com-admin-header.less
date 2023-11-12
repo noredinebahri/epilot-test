@@ -1,0 +1,216 @@
+﻿
+/************************************************************************************************************************************************
+                                                                    Admin Page header
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-admin-header {
+    background-color: @colorGrey3;
+    color: @colorWhite;
+    height: 71px;
+
+    input[type=text] {
+        width: 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        background-position: 10px 5px;
+        background-repeat: no-repeat;
+        background-image: url('/_layouts/15/Orange.Common/Design/Images/recherche_icn.png');
+        transition: width 0.4s ease-in-out;
+        padding: 2px 5px 2px 40px;
+    }
+
+    input[type=text]:focus {
+        width: 400px;
+    }
+
+    .btn-group {
+        text-align: center;
+        width: 100px;
+        height: 100%;
+        border-right: 1px solid @colorWhite;
+
+        i {
+            font-size: 30px;
+        }
+
+        li {
+            height: 100%;
+        }
+    }
+
+    .btn-agency {
+        padding: 0;
+
+        div:first-child {
+            line-height: 30px;
+
+            .fa-home,
+            .fa-crosshairs {
+                font-size: 25px;
+            }
+        }
+
+        .agencyName {
+            width: 80px;
+            font-size: 14px;
+        }
+
+        &.module-selector {
+            div:first-child {
+                line-height: 33px;
+            }
+        }
+    }
+
+    .periodName {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .btn-multiExport {
+        float: right;
+        padding-top: 5px;
+        padding-left: 10px;
+        text-align: center;
+        border-left: 1px solid @colorWhite;
+        height: 71px;
+        background-color: @colorGreen2;
+
+        .fa-download {
+            font-size: 35px;
+            margin-top: 10%;
+        }
+
+        .exporter {
+            width: 80px;
+            line-height: 23px;
+            font-size: 14px;
+            margin-top: 3px;
+        }
+    }
+
+    .header-title {
+        font-size: 30px;
+        margin-left: 15px;
+        line-height: 70px;
+
+        &.cap-header-title {
+            line-height: 0;
+            margin-top: 10px;
+
+            span {
+                line-height: 30px;
+            }
+        }
+
+        .header-selected-module-name {
+            color: #CCC;
+            //font-size: 25px;
+        }
+    }
+
+
+    .sub-header-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .btn-result {
+        padding-top: 5px;
+        font-size: 30px;
+        text-align: center;
+        width: 100px;
+        height: 100%;
+        background-color: @colorPurple;
+        color: @colorWhite;
+    }
+
+    .btn-action, .btn-accueil {
+        float: right;
+        padding-top: 5px;
+        padding-left: 5px;
+        font-size: 30px;
+        text-align: center;
+        border-left: 1px solid @colorWhite;
+        width: 90px;
+        height: 100%;
+        background-color: @colorGreen2;
+        cursor: pointer;
+
+        a {
+            color: @colorWhite;
+        }
+
+        &:hover {
+            background-color: @colorGrey11;
+
+            a {
+                color: @colorBlack !important;
+            }
+        }
+
+        &[disabled] {
+            a {
+                color: @colorGrey3 !important;
+                cursor: default;
+            }
+
+            cursor: default;
+        }
+    }
+
+    .btn-action.btn-action-info {
+        background-color: #FF6600;
+
+        div:first-child {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        div:last-child {
+            font-size: 15px;
+            line-height: 36px;
+        }
+    }
+}
+
+.sub-header {
+    height: 30px;
+    background-color: @colorGrey1;
+    padding: 0 !important;
+    margin-bottom: 15px;
+
+    .btn-accueil {
+        float: left;
+        padding: 5px;
+        font-size: 14px;
+        text-align: center;
+        color: @colorGrey11;
+        height: 30px;
+        margin-right: 10px;
+        margin-left: 5px;
+        cursor: pointer;
+
+
+        &.active {
+            border-bottom: 3px solid @colorGrey11;
+            color: @colorBlack !important;
+            font-weight: bold;
+
+            a, a:visited {
+                color: @colorBlack;
+            }
+        }
+
+        i {
+            font-size: 1.2em;
+        }
+
+        a, a:visited {
+            color: @colorBlack;
+        }
+    }
+}
+
+

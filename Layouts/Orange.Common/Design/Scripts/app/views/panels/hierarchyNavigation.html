@@ -1,0 +1,154 @@
+﻿<div>
+    <div class="hierarchie-top-button" ng-show="vm.Panel.Show"
+         ng-class="{ 'active' : vm.Panel.Open && (vm.panelCurrent == vm.Panel.Name), 'hidden' : !vm.Panel.Show }"
+         ng-click="$event.stopPropagation(); vm.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fa fa-users"></span>
+                <span class="fa-layers-counter fa-2x">
+                    <span ng-if="$root.navigationActor">{{$root.navigationActor.Initiales}}</span>
+                    <span ng-if="$root.epilotcurrentactor">{{$root.epilotcurrentactor.Initiales}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="com-hierarchie-navigation ms-dialogHidden"
+         ng-class="{'open' : vm.Panel.Open,  'close' : !vm.Panel.Open}"
+         ng-if="(vm.panelCurrent == vm.Panel.Name)">
+        <div ng-if="vm.Panel.Open">
+            <div class="nav-section nav-section-headernav-section nav-section-header" title="Profil acteur">
+                <div class="txtContainer">
+                    <span>Choisir un acteur</span>
+                </div>
+                <div class="search-ico" ng-click="$event.stopPropagation();vm.Search.Display();" ng-class="{ 'active' : !vm.Search.isOpened }">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="nav-section nav-section-search" ng-if="!vm.Search.isOpened" title="Rechercher un acteur" ng-click="$event.stopPropagation();">
+                <input type="text" ng-model="selectedActor" class="form-control form-control-standard" placeholder="Rechercher un acteur..."
+                       uib-typeahead="item.Label for item in vm.Search.SearchActors($viewValue)" typeahead-min-length="0"
+                       typeahead-on-select="vm.Search.SelectActor($item, $model, $label, $event)">
+            </div>
+            <div class="nav-section nav-section-main">
+                <!-- Switch pour CAPA -->
+                <div class="switch-capa">
+                    
+                </div>
+
+                <!-- Delegation -->
+                <div class="nav-section-delegation" ng-if="vm.Delegation.Liste.length > 0">
+                    <div class="content">
+                        Vous êtes autorisés à visualiser les résultats de ....
+                        <ul>
+                            <li>
+                                <div class="acteur" ng-click="vm.Delegation.Clean(); $event.stopPropagation();" ng-class="{ 'active' : !vm.Delegation.Selected  }">
+                                    <i class="fa fa-user" aria-hidden="true"></i>  <span ng-bind="vm.User.Current.NomComplet" ng-if="vm.User.Current.NomComplet"></span> <span ng-if="!vm.User.Current.NomComplet">Moi</span>
+                                </div>
+                            </li>
+                            <li ng-repeat="delegation in vm.Delegation.Liste">
+                                <div class="acteur" ng-click="vm.Delegation.Change(delegation); $event.stopPropagation();" ng-class="{ 'active' : delegation.SourceCodeAlliance == vm.Delegation.Selected }">
+                                    <i class="fa fa-user" aria-hidden="true"></i>  {{delegation.SourceDisplayName}}
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="fleche"></div>
+                   
+                </div>
+
+                <!-- Hierarchie -->
+                <div class="nav-section-hierarchy">
+                    <!-- Message alerte aucun resultat -->
+                    <div class="error-search" ng-if="vm.Search.NombreResultat == 0">
+                        Aucun acteur ne correspond à votre recherche
+                    </div>
+                    <div class="error-search" ng-if="vm.Hierarchie.Errors" ng-bind="vm.Hierarchie.Errors">
+                    </div>
+                    <div ng-if="vm.Hierarchie.Current && vm.Search.NombreResultat != 0">
+                        <div>
+                            <div class="acteur current-user" ng-click="vm.Acteur.Select(vm.Hierarchie.Current); $event.stopPropagation();"
+                                 ng-class="{ 'active' : currentActorId == vm.Hierarchie.Current.Id}">
+                                <div class="icone"
+                                     ng-attr-title="{{vm.Hierarchie.Current.Label}}">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="titre titre-acteur-courant">
+                                    <span ng-bind="vm.Hierarchie.Current.Label | limitTo:22"></span>
+                                    <span ng-if="vm.Hierarchie.Current.Label.length > 22"> ...</span>
+                                    <span ng-if="vm.Hierarchie.Current.Level > vm.Acteur.Connecte.Level"
+                                          ng-click="vm.Hierarchie.Navigate(vm.Hierarchie.Current.ManagerCode, vm.Hierarchie.Current.AgencyId); $event.stopPropagation()">
+                                        <i class="fa fa-arrow-up level-up" aria-hidden="true"
+                                           title="Aller au niveau supérieur"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear:both"></div>
+                        <div ng-if="vm.Hierarchie.Current.TeamMembersCount">
+                            <div class="hierarchy">
+                                <ul>
+                                    <li ng-repeat="member in vm.Hierarchie.Current.TeamMembers | orderBy : 'Label' ">
+                                        <div class="acteur" ng-class="{ 'active' : currentActorId == member.Id}">
+                                            <div class="icone"
+                                                 ng-if="member.CodeFonction"
+                                                 ng-attr-title="{{member.Label + ' (' + member.CodeFonction + ')'}}"
+                                                 ng-click="vm.Acteur.Select(member); $event.stopPropagation();">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="icone"
+                                                 ng-if="!member.CodeFonction"
+                                                 ng-attr-title="{{member.Label}}"
+                                                 ng-click="vm.Acteur.Select(member); $event.stopPropagation();">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="titre"
+                                                 ng-if="member.CodeFonction"
+                                                 ng-attr-title="{{member.Label + ' (' + member.CodeFonction+ ')'}}">
+                                                <span ng-click="vm.Acteur.Select(member);$event.stopPropagation();">
+                                                    {{member.Label | limitTo: 35}}
+                                                </span>
+                                                <span ng-if="member.Label.length > 35"> ...</span>
+                                                <a ng-click="vm.Hierarchie.Navigate(member.Code, member.AgencyId); $event.stopPropagation();"
+                                                   ng-if="((member.TeamMembers && member.TeamMembers.length) || member.TeamMembersCount)">
+                                                    <i class="fa fa-plus" aria-hidden="true" title="Aller au niveau inférieur"></i>
+                                                </a>
+                                            </div>
+                                            <div class="titre"
+                                                 ng-if="!member.CodeFonction"
+                                                 ng-attr-title="{{member.Label}}">
+                                                <span ng-click="vm.Acteur.Select(member);$event.stopPropagation();">
+                                                    {{member.Label | limitTo: 35}}
+                                                </span>
+                                                <span ng-if="member.Label.length > 35"> ...</span>
+                                                <a ng-click="vm.Hierarchie.Navigate(member.Code, member.AgencyId); $event.stopPropagation();"
+                                                   ng-if="((member.TeamMembers && member.TeamMembers.length) || member.TeamMembersCount)">
+                                                    <i class="fa fa-plus" aria-hidden="true" title="Aller au niveau inférieur"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!vm.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header" title="Profil acteur">&nbsp;</div>
+            </div>
+            <div class="nav-section nav-section-search" ng-if="!vm.Search.isOpened"></div>
+            <div class="nav-section-main"></div>
+        </div>
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); vm.Panel.Display()">
+            <div ng-if="vm.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="vm.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+</div>

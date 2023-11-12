@@ -1,0 +1,56 @@
+﻿@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-aide {
+    background-color: #EEE;
+    .nav-section-main {
+        font-size: 14px;
+        padding: 0px 15px;
+        background-color: #404040;
+
+        h1 {
+            font-size: 21px;
+            color: @colorWhite;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 5px;
+
+            li {
+                cursor: pointer;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid @colorGrey11;
+
+                &:hover {
+                    color: @colorOrangeDefault;
+                }
+            }
+        }
+
+        .scrollbar-dynamic {
+            min-height: ~"calc(50vh - 60px)" !important;
+            max-height: ~"calc(50vh - 60px)" !important;
+        }
+        &.mode-operatoire {
+            background-color: #EEE;
+            color: @colorBlack;
+            min-height: initial !important;
+
+            h1 {
+                color: @colorBlack;
+            }
+        }
+        &.video {
+            background-color: #EEE;
+            color: @colorBlack;
+
+            h1 {
+                color: @colorBlack;
+            }
+        }
+        &.didacticiel {
+            min-height: 200px !important;
+        }
+    }
+}

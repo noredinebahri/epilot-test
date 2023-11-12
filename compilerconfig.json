@@ -1,0 +1,118 @@
+﻿[
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-hierarchie-navigation.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-hierarchie-navigation.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-notification.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-notification.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-bloc-note.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-bloc-note.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-admin-header.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-admin-header.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/com-nav-left.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/com-nav-left.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-schema-form.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-schema-form.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-topnav-alerts.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-topnav-alerts.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-tabs.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-tabs.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/com-nav-top.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/com-nav-top.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/com-suitebar.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/com-suitebar.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/sqlserver.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/sqlserver.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/global.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/global.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/sharepoint.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/sharepoint.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-loading.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-loading.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-selection-period.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-selection-period.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-uigrid.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-uigrid.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-modal.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-modal.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-switch.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-switch.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-recherche-client.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-recherche-client.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-override-user.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-override-user.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-aide.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-aide.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-resultat-import.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-resultat-import.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-message-info-admin.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-message-info-admin.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-button.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-button.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-telechargement.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-telechargement.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-error.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-error.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/pages/template-2-columns.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/pages/template-2-columns.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/components/com-recherche-client-panel.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/components/com-recherche-client-panel.less"
+  },
+  {
+    "outputFile": "Layouts/Orange.Common/Design/Styles/master/home-nav.css",
+    "inputFile": "Layouts/Orange.Common/Design/Styles/master/home-nav.less"
+  }
+]

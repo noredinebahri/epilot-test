@@ -1,0 +1,151 @@
+﻿/************************************************************************************************************************************************
+                                                            TOP navigation (tuiles)
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+#home-nav {
+    margin: 100px;
+    margin-top: 30px;
+
+    .home-tiles {
+        list-style-type: none;
+
+        &::before {
+            border-bottom: 25px solid @colorGrey1;
+            border-right: 25px solid transparent;
+            content: "";
+            display: block;
+            height: 30px;
+            left: 0;
+            position: absolute;
+            top: -30px;
+            width: 0;
+        }
+
+        li {
+            /*height: 100px;
+            width: 100px;
+            float: left;
+            margin: 3px;*/
+            padding: 5px;
+
+            a.navTile {
+                font-weight: bold;
+                font-size: 12px;
+                color: inherit;
+
+                &:visited {
+                    color: inherit;
+                }
+
+                .navTile-background {
+                    padding: 20px;
+                    background-color: @colorWhite;
+
+                    p {
+                        display: table-cell;
+                        vertical-align: top;
+                        text-align: center;
+                        line-height: normal;
+                        font-size: 18px !important;
+
+                        svg {
+                            font-size: 30px;
+                            width: 90px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-recherche-client {
+        .nav-section-main{
+            margin-top: 30px;
+            div{
+                div{
+                    .recherche-client-toggle-view{
+                        .toggle-view-left, .toggle-view-middle, .toggle-view-right{
+                        font-size:16px !important;
+                        }
+                    }
+                    div{
+                        .btn{
+                            font-size: 16px !important;
+                            border-radius : 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .popover {
+            min-width: 450px;
+
+            .popover-inner {
+                width: 450px;
+
+                .popover-content {
+                    width: 450px;
+                }
+            }
+        }
+    }
+
+    .home-favorites {
+        margin-top: 30px;
+
+        ul {
+            list-style-type: none;
+            margin-top: 30px;
+
+            li {
+                div {
+                    background-color: #ff7900;
+                    border-radius: 25px;
+                    height: 80px;
+
+                    a {
+                        span {
+                            color: @colorWhite;
+                            font-size: 16px;
+                            line-height: 25px;
+                            font-weight: bold;
+
+                            svg {
+                                font-size: 30px;
+                                width: 90px;
+                                margin-bottom: 10px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .green-background-color {
+            background-color: #50be87 !important;
+        }
+
+        .orange-background-color {
+            background-color: #ff7900 !important;
+        }
+
+        .blue-background-color {
+            background-color: #1c91c9 !important;
+        }
+
+        .red-background-color {
+            background-color: red !important;
+        }
+
+        .purple-background-color {
+            background-color: #a885d8 !important;
+        }
+    }
+    .nav-home-title{
+        text-align:left;
+    }
+}

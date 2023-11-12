@@ -1,0 +1,29 @@
+﻿/************************************************************************************************************************************************
+                              Surcharge styles SharePoint
+************************************************************************************************************************************************/
+#s4-ribbonrow {
+  margin-left: 50px;
+}
+#s4-bodyContainer {
+  padding-bottom: 0!important;
+}
+#contentRow #contentBox,
+#com-nav-left,
+#s4-ribbonrow {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#contentRow {
+  padding-top: 0 !important;
+  font-size: 11px;
+  padding-right: 20px;
+}
+#contentRow #contentBox {
+  margin-left: 50px !important;
+  margin-right: 0 !important;
+}
+#s4-workspace.nav-left-open #contentBox {
+  margin-left: 250px !important;
+}

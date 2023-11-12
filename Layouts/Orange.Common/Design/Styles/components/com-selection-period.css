@@ -1,0 +1,122 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Selection periode
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-top-selector {
+  padding-right: 0;
+}
+.com-top-selector .dropdown-toggle {
+  background: transparent none repeat scroll 0 0;
+  padding: 10px 10px 5px 10px;
+  border: medium none;
+}
+.com-top-selector .dropdown-toggle .text-select {
+  text-align: center;
+  width: 100px;
+}
+.com-top-selector .dropdown-toggle .glyphicon {
+  margin-left: 5px;
+}
+.com-top-selector .dropdown-toggle.baseddt {
+  padding-right: 50px;
+  border: none;
+}
+.com-top-selector div:first-child {
+  line-height: 30px;
+  text-align: center;
+}
+.com-top-selector div:first-child svg {
+  font-size: 25px;
+}
+.com-top-selector-period .popover {
+  top: 60px !important;
+  left: 0px !important;
+  width: 340px;
+  max-width: 340px;
+  border-right: 1px #CCC solid;
+  border-bottom: 1px #CCC solid;
+  border-radius: 0px;
+}
+.com-top-selector-period .popover .arrow,
+.com-top-selector-period .popover .popover-title {
+  display: none;
+}
+.com-top-selector-period .popover .btn-action {
+  cursor: pointer;
+  color: #FFFFFF !important;
+}
+.com-top-selector-period .popover .btn-action:hover,
+.com-top-selector-period .popover .btn-action:visited {
+  background-color: #808080;
+}
+.com-top-selector-period .popover .dropdown-menu {
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+.com-top-selector-period .popover .dropdown-menu li {
+  background-color: #00b0f0;
+  border: 1px solid #fff;
+}
+.com-top-selector-period .popover .dropdown-menu li a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+.com-top-selector-period .popover .dropdown-menu li a:hover,
+.com-top-selector-period .popover .dropdown-menu li a:visited {
+  background-image: none;
+  background-color: #808080 !important;
+}
+.com-top-selector-period .popover .dropdown-menu li:hover,
+.com-top-selector-period .popover .dropdown-menu li:visited {
+  background-image: none;
+  background-color: #808080 !important;
+}
+.com-top-selector-period .btn-group {
+  background-color: #00b0f0;
+  margin: 2px;
+}
+.com-top-selector-period .btn-group .btn-action,
+.com-top-selector-period .btn-group .btn-action:hover {
+  height: 72px;
+  width: 120px;
+}
+.com-top-selector-period .template ul {
+  color: #000000;
+}
+.com-top-selector-period .dropdown-toggle-link {
+  height: 100%;
+}
+.common-select-period .text-select-period {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+}
+.common-select-period .text-select-period span svg {
+  font-size: 12px;
+}
+.common-select-period button {
+  height: 70px;
+}
+.com-admin-header .com-top-selector-period button[disabled] {
+  background-color: #00b0f0;
+}
+.popover-content .template .btn-group .btn-action {
+  width: 100px !important;
+  height: 70px !important;
+}
+.popover-title {
+  background-color: #00b0f0;
+  color: #FFFFFF;
+  height: 35px;
+}

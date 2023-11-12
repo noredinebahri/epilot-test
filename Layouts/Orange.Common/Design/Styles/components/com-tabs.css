@@ -1,0 +1,39 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - navigation par onglet
+************************************************************************************************************************************************/
+/*@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.nav-tabs {
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    > li {
+        position: relative;
+        border: 2px solid @colorBlue2;
+        margin-right: 3px;
+
+        > a {
+            color: @colorBlue2;
+            font-size: 16px;
+            border: none;
+            font-weight: bold;
+
+            &:hover {
+                background-color: @colorBlue2;
+            }
+        }
+
+        &.active {
+            background-color: @colorBlue2;
+            color: @colorWhite;
+
+            a, a:hover, a:focus {
+                background-color: @colorBlue2;
+                color: @colorWhite;
+                border: none;
+            }
+        }
+    }
+}*/

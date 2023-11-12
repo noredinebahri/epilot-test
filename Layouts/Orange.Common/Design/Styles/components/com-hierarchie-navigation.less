@@ -1,0 +1,245 @@
+﻿/************************************************************************************************************************************************
+                                                            Hierarchy navigation styles
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-hierarchie-navigation {
+    font-family: @fontDefault;
+    background-color: @colorGrey13;
+    color: @colorGrey1;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    z-index: 50;
+    box-shadow: 1px 1px 9px #333;
+
+    .form-control {
+        border-radius: 0;
+        border: 0;
+    }
+
+    &.open {
+        width: 450px;
+        transition: width 0.2s;
+    }
+
+    &.close {
+        width: 20px;
+        transition: width 0.2s;
+        opacity: 1 !important;
+
+        .nav-section {
+
+            &.nav-section-search {
+                padding: 0;
+            }
+        }
+    }
+
+    .nav-section {
+        position: relative;
+        /* SECTION - HEADER */
+        &.nav-section-header {
+            height: 60px;
+            line-height: 60px;
+            background: @colorOrangeDefault;
+            display: block;
+            font-size: 30px;
+            text-align: center;
+            /*.user-ico {
+                height: 50px;
+                width: 40px;
+                float: left;
+                text-align: center;
+                font-size: 20px;
+            }*/
+            .txtContainer {
+                text-align: left;
+                font-size: 20px;
+                margin-left: 10px;
+                float: left;
+                font-weight: bold;
+            }
+
+            .search-ico {
+                float: right;
+                background-color: @colorGrey7;
+                height: 100%;
+                width: 60px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: @colorGrey11;
+                }
+            }
+        }
+        /* SECTION - RECHERCHE */
+        &.nav-section-search {
+            background-color: @colorGrey11;
+        }
+        /* SECTION - MAIN */
+        &.nav-section-main {
+            /* SECTION - DELEGATION */
+            .nav-section-delegation {
+                margin: 10px;
+                z-index: 100;
+
+                .content {
+                    background-color: #848484;
+                    padding: 10px;
+                    font-size:16px;
+
+                    ul {
+                        list-style-type: none;
+                        padding-left: 10px;
+
+                        li {
+                            padding: 3px;
+                            margin-bottom:5px;
+                            margin-top:5px;
+
+                            .acteur {
+                                background-color: #ddd;
+                                border-radius: 15px;
+                                padding: 6px 0px 6px 12px;
+                                color: @colorBlack;
+                                cursor:pointer;
+                                font-size:14px;
+
+                                &.active, &:hover{
+                                    background-color: @colorOrangeDefault;
+                                    color:@colorWhite;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fleche {
+                    border-style: solid;
+                    border-width: 20px 20px 0px 20px;
+                    border-color: #848484 transparent transparent transparent;
+                    width: 40px;
+                }
+            }
+            /* SECTION - HIERARCHIE */
+            .nav-section-hierarchy {
+                background-color: @colorBlack;
+                padding: 10px;
+                margin: 10px;
+                z-index: 100;
+
+                .acteur {
+                    display: inline-block;
+                    width: 100%;
+
+                    .icone {
+                        text-align: center;
+                        width: 25px;
+                        height: 25px;
+                        float: left;
+                        color: @colorWhite;
+                        margin-right: 5px;
+
+                        svg {
+                            font-size: 16px;
+                            opacity: 0.5;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .titre {
+                        a {
+                            text-decoration: none;
+                            color: @colorWhite;
+                            padding: 0 10px 0 5px;
+                        }
+
+                        span {
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .level-up {
+                        cursor: pointer;
+                    }
+
+                    &:hover, &.active {
+                        .icone {
+                            background-color: @colorWhite;
+                            color: @colorOrangeDefault;
+
+                            i {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &.current-user {
+                        svg {
+                            margin-top: 5px;
+                        }
+
+                        .titre {
+                            //padding-top:5px;
+                            span:last-child {
+                                padding: 0 10px 0 5px;
+                            }
+                        }
+                    }
+                }
+
+                .hierarchy {
+                    ul {
+                        padding-left: 5px;
+                        padding-top: 10px;
+                    }
+
+                    li {
+                        position: relative;
+                        line-height: 26px;
+                        list-style: none;
+                        cursor: pointer;
+                        margin-left: 20px;
+                    }
+                }
+
+                .error-search {
+                    padding: 0 10px;
+                }
+            }
+            /*&:hover {
+                overflow-y: auto;
+                height: calc(100vh -100px);
+            }*/
+        }
+    }
+}
+
+
+.com-button-open-top {
+    height: 80px;
+    width: 25px;
+    background-color: @colorGrey13;
+    position: absolute;
+    left: -25px;
+    top: 20%;
+    border-radius: 10px 0 0 10px;
+    padding: 4px 2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 9px #333;
+
+    div {
+        height: 72px;
+        width: 22px;
+        line-height: 70px;
+        text-align: center;
+        font-size: 12px;
+        margin-left: 1px;
+        background-image: linear-gradient(to right,#404040,#808080,#404040,#808080,#404040,#808080);
+        border-radius: 8px 0 0 8px;
+    }
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="Orange_EPilot" ID="10001">
+    <Configuration ID="0" Title="Orange EPilot - Site Module" Hidden="FALSE" ImageUrl="/_layouts/images/CPVW.gif" Description="Sous site de type module" DisplayCategory="Orange">
+    </Configuration>
+    <Configuration ID="1" Title="Orange EPilot - Site Rubrique" Hidden="FALSE" ImageUrl="/_layouts/images/CPVW.gif" Description="Sous site de type rubirque" DisplayCategory="Orange">
+    </Configuration>
+  </Template>
+</Templates>

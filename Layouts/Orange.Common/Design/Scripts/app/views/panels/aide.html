@@ -1,0 +1,85 @@
+﻿<div ng-controller="aideController as hp" ng-cloak>
+    <div class="aide-top-button"
+        ng-class="{ 'active' : hp.Panel.Open && (hp.panelCurrent == hp.Panel.Name) }"
+         ng-click="$event.stopPropagation(); hp.Panel.Display()">
+        <div>
+            <div class="fa-layers fa-fw">
+                <span class="fas fa-question"></span>
+            </div>
+        </div>
+    </div>
+    <div class="com-hierarchie-navigation com-aide ms-dialogHidden"
+         ng-class="{'open' : hp.Panel.Open,  'close' : !hp.Panel.Open}"
+         ng-if="(hp.panelCurrent == hp.Panel.Name)">
+        <div ng-if="hp.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header" title="Profil acteur">
+                    <div class="txtContainer">
+                        <span>Mon aide</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-section-main didacticiel scrollbar-dynamic" data-jquery-scrollbar="hp.jQueryScrollbarOptions">
+                <h1>
+                    <i class="fas fa-laptop"></i>  Didactitiels
+                </h1>
+                <ul ng-if="hp.tutoriels.length > 0">
+                    <li ng-repeat="tuto in hp.tutoriels" ng-click="hp.jouerTutoriel(tuto)">
+                        <i class="far fa-gem"></i>
+                        <span ng-bind="tuto.nom"></span>
+                    </li>
+                </ul>
+                <div ng-if="hp.tutoriels.length == 0" class="error-search">
+                    Aucun didactitiel n'est disponible pour cette page.
+                </div>
+            </div>
+            
+            <div class="nav-section-main mode-operatoire scrollbar-dynamic" data-jquery-scrollbar="hp.jQueryScrollbarOptions">
+                <h1>
+                    <i class="fas fa-newspaper"></i>  Modes opératoires
+                </h1>
+                <ul ng-if="hp.modesOperatoires.length > 0">
+                    <li ng-repeat="modeOperatoires in hp.modesOperatoires" ng-click="hp.openModeOperatoire(modeOperatoires)">
+                        <i class="fa fa-file-alt"></i>
+                        <b>Epilot : </b><span ng-bind="modeOperatoires.nom"></span>
+                        <span style="float:right">{{modeOperatoires.date}}</span>
+                    </li>
+                </ul>
+                <div ng-if="hp.modesOperatoires.length == 0" class="error-search">
+                    Aucun mode opératoire n'est disponible pour cette page.
+                </div>
+            </div>
+            
+
+            <div class="nav-section-main video scrollbar-dynamic" data-jquery-scrollbar="hp.jQueryScrollbarOptions">
+                <h1>
+                    <i class="fas fa-video"></i>  Tutoriels
+                </h1>
+                <ul ng-if="hp.tutorielsVideos.length > 0">
+                    <li ng-repeat="tutoVideo in hp.tutorielsVideos" ng-click="hp.jouerTutorielVideo(tutoVideo)">
+                        <i class="far fa-play-circle"></i>
+                        <b ng-if="tutoVideo.episode">{{tutoVideo.episode}} : </b><span ng-bind="tutoVideo.nom"></span>
+                        <span style="float:right">durée : {{tutoVideo.duree}}</span>
+                    </li>
+                </ul>
+                <div ng-if="hp.tutorielsVideos.length == 0" class="error-search">
+                    Aucun tutoriel vidéo n'est disponible pour cette page.
+                </div>
+            </div>
+        </div>
+        <div ng-if="!hp.Panel.Open">
+            <div class="nav-section nav-section-header">
+                <div class="nav-header" title="Aide">&nbsp;</div>
+            </div>
+            <div class="nav-section-main"></div>
+        </div>
+        <div class="com-button-open-top" ng-click="$event.stopPropagation(); hp.Panel.Display()">
+            <div ng-if="hp.Panel.Open == true">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <div ng-if="hp.Panel.Open == false">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+        </div>
+    </div>
+</div>

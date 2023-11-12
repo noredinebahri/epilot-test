@@ -1,0 +1,124 @@
+﻿@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+/*
+    inventaires non exhaustif des types de boutons
+
+    - [] Orange.EPilot/Pages/PlanAction.aspx > nouvelles action
+        - [] blanc sur gris clair (annuler)
+        - [] blanc sur gris (valider disabled)
+        - [] blanc sur noir, hover orange (valider)
+    - [] Orange.EPilot/Pages/Ventilation.aspx // -> bouton noir-blanc
+        - [] gris sur blanc et border gris (enregistrer disabled)
+        - [] 
+    - [] Orange.EPilot/Pages/PlanAction.aspx > nouvelles action // -> bouton noir-blanc
+        - [] noir sur blanc et border noir (Exporter)
+        - [] noir sur blanc et border gris (ajouter une action) // pas conforme au reste et c'est un <a> dans une div !
+
+    - [] les boutons des pages admin TPS // -> définis dans global.less
+        - [] blanc sur orange sans hover
+        - [] noir sur blanc sans hover
+
+*/
+.com-button {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle;
+
+    &.type-1 {
+        width: 150px;
+        height: 30px;
+        line-height: 30px;
+
+        &.primary {
+            color: #fff;
+            background-color: @colorBlack;
+
+            &:hover {
+                background-color: @colorOrangeDefault;
+            }
+
+            &.disabled, &.disabled:hover {
+                cursor: no-drop;
+                background-color: @colorGrey10;
+
+                &.disabled:hover {
+                }
+            }
+        }
+
+        &.secondary {
+            color: #fff;
+            background-color: @colorGrey8;
+
+            &:hover {
+                background-color: @colorGrey9;
+            }
+
+            &.disabled, &.disabled:hover {
+                cursor: no-drop;
+            }
+        }
+
+        &.tertiary {
+            color: @colorBlack;
+            background-color: @colorWhite;
+            border: 2px solid @colorBlack;
+
+            &:hover {
+                background-color: @colorGrey8;
+            }
+
+            &.disabled, &.disabled:hover {
+                cursor: no-drop;
+            }
+        }
+    }
+
+    &.type-2 {
+        font-size: 14px;
+        border: 2px solid @colorBlack;
+        background-color: @colorWhite;
+        padding: 6px;
+        cursor: pointer;
+
+        &.primary, &.secondary { // no difference between primary and secondary for now
+            background-color: @colorWhite;
+
+            &:hover {
+                background-color: @colorGrey6;
+            }
+
+            &.disabled, &.disabled:hover {
+                cursor: no-drop;
+                color: @colorGrey5;
+                border-color: @colorGrey5;
+            }
+        }
+    }
+    
+    &.type-3 {
+        font-size: 14px;
+        border: 1px solid @colorWhite;
+        background-color: @colorTransparent;
+        color: @colorWhite;
+        padding: 2px 10px;
+        cursor: pointer;
+        height: 26px;
+
+        &.primary, &.secondary {
+            color: @colorWhite;
+            background-color: @colorTransparent;
+
+            &:hover {
+                background-color: @colorWhite;
+                color: @colorOrange2;
+            }
+        }
+
+        &.secondary {
+            border: 0;
+        }
+    }
+}

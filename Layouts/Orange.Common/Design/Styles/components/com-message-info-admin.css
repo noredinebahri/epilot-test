@@ -1,0 +1,19 @@
+﻿.com-message-info-admin {
+  text-align: center;
+}
+.com-message-info-admin .message_texte {
+  font-size: 20px;
+  width: 350px;
+  margin: auto;
+}
+.com-message-info-admin .message_texte .orange-bold {
+  color: #FF6600;
+  font-weight: bold;
+}
+.com-message-info-admin .message_picto {
+  margin: auto;
+  padding-top: 20px;
+}
+.com-message-info-admin .message_picto img {
+  width: 250px;
+}

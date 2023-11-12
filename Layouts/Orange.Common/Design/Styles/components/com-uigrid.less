@@ -1,0 +1,143 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Grille administration
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-uigrid {
+    /*Grid*/
+    .grid {
+        z-index: 20;
+        height: ~"calc(100vh - 195px)";
+    }
+
+    .ui-grid-cell-contents {
+        padding-left: 10px
+    }
+
+    .grid.ui-grid {
+        width: 100%;
+        border: none;
+        padding: 5px 0;
+    }
+
+    .grid-align-center {
+        text-align: center;
+    }
+
+
+    .ui-grid-row:hover .ui-grid-cell {
+        cursor: pointer;
+        background-color: @colorOrangeDefault !important;
+        color: @colorWhite;
+        font-weight: 700;
+    }
+
+    .ui-grid-header-cell-label {
+        margin-left: 0px;
+    }
+
+    .ui-grid-sort-priority-number.ng-binding {
+        visibility: hidden;
+    }
+
+    .ui-grid-header-canvas {
+        background-color: @colorGrey1;
+        border: none;
+    }
+
+    .ui-grid-top-panel {
+        color: @colorBlack;
+    }
+
+    .ui-grid-pager-panel {
+        bottom: -20px;
+    }
+    /*Cell*/
+    .icon {
+        font-size: 20px;
+    }
+    /*    Pagination   */
+    .pagination, .results-per-page {
+        font-size: 14px;
+        font-family: @fontDefault;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 7px;
+        padding-bottom: 15px;
+
+        > li > a {
+            border: none !important;
+            color: #000 !important;
+            border: 2px solid #000 !important;
+            font-weight: bold !important;
+            margin-right: 6px;
+        }
+
+        > .active > a,
+        > .active > span,
+        > .active > a:hover,
+        > .active > span:hover {
+            background-color: @colorOrangeDefault !important;
+            border: 2px solid @colorOrangeDefault !important;
+            color: @colorWhite !important;
+        }
+
+        > li > a:hover,
+        > li > span:hover {
+            background-color: @colorOrangeDefault !important;
+            border: 2px solid @colorOrangeDefault !important;
+            color: @colorWhite !important;
+        }
+    }
+
+    .pagination {
+        float: left;
+
+        > li.pg-selected > a {
+            border: 1px solid @colorGrey5;
+            color: @colorOrangeDefault;
+            background: @colorGrey1;
+            font-weight: bold;
+        }
+
+        > li:first-child > a:focus,
+        > li:first-child > span:focus,
+        > li:last-child > a:focus,
+        > li:last-child > span:focus {
+            background-color: @colorWhite;
+            border: 1px solid @colorGrey5;
+            color: @colorOrangeDefault;
+        }
+
+        > li:first-child > a:hover,
+        > li:first-child > span:hover,
+        > li:last-child > a:hover,
+        > li:last-child > span:hover {
+            background-color: @colorOrangeDefault;
+            border: 1px solid @colorOrangeDefault;
+            color: @colorWhite;
+        }
+    }
+
+    .item-per-page {
+        .item-per-page-selected {
+            background-color: @colorOrangeDefault !important;
+            border: 2px solid @colorOrangeDefault !important;
+            color: @colorWhite !important;
+        }
+    }
+
+    .results-per-page {
+        float: right;
+
+        > li.active > a {
+            border: 1px solid @colorGrey5 !important;
+            color: @colorOrangeDefault !important;
+            background: @colorOrangeDefault !important;
+            font-weight: bold !important;
+        }
+    }
+}

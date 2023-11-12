@@ -1,0 +1,145 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Selection periode
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.com-top-selector {
+    padding-right:0;
+
+    .dropdown-toggle {
+        background: transparent none repeat scroll 0 0;
+        padding: 10px 10px 5px 10px;
+        border: medium none;
+
+        .text-select {
+            text-align: center;
+            width: 100px;
+        }
+
+        .glyphicon {
+            margin-left: 5px;
+        }
+
+        &.baseddt {
+            padding-right: 50px;
+            border: none;
+        }
+    }
+
+    div:first-child {
+        line-height: 30px;
+        text-align: center;
+
+        svg  {
+            font-size:25px;
+        }
+    }
+}
+
+.com-top-selector-period {
+
+    .popover {
+        top: 60px !important;
+        left: 0px !important;
+        width: 340px;
+        max-width: 340px;
+        border-right: 1px #CCC solid;
+        border-bottom: 1px #CCC solid;
+        border-radius: 0px;
+
+        .arrow, .popover-title {
+            display: none;
+        }
+
+        .btn-action {
+            cursor: pointer;
+            color: @colorWhite !important;
+
+            &:hover, &:visited {
+                background-color: @colorGrey11;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 100px !important;
+            max-width: 100px !important;
+
+            li {
+                background-color: @colorBlue2;
+                border: 1px solid #fff;
+
+                a {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: @colorWhite;
+                    padding: 10px 20px;
+
+                    &:hover, &:visited {
+                        background-image: none;
+                        background-color: @colorGrey11 !important;
+                    }
+                }
+
+                &:hover, &:visited {
+                    background-image: none;
+                    background-color: @colorGrey11 !important;
+                }
+            }
+        }
+    }
+
+    .btn-group {
+        background-color: @colorBlue2;
+        margin: 2px;
+
+        .btn-action,
+        .btn-action:hover {
+            height: 72px;
+            width: 120px;
+        }
+    }
+
+    .template ul {
+        color: @colorBlack;
+    }
+
+    .dropdown-toggle-link {
+        height: 100%;
+    }
+}
+
+
+.common-select-period {
+    .text-select-period {
+        font-size: 20px;
+        font-weight: bold;
+        width: 100px;
+
+        span {
+            svg  {
+                font-size: 12px;
+            }
+        }
+    }
+
+    button {
+        height: 70px;
+    }
+}
+
+.com-admin-header .com-top-selector-period button[disabled] {
+    background-color: @colorBlue2;
+}
+
+.popover-content .template .btn-group .btn-action {
+    width: 100px !important;
+    height: 70px !important;
+}
+
+.popover-title {
+    background-color: @colorBlue2;
+    color: @colorWhite;
+    height: 35px;
+}
+

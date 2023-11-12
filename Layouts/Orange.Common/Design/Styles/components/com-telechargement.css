@@ -1,0 +1,80 @@
+﻿/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+.com-telechargement .nav-section-main {
+  font-size: 14px;
+  padding: 0px 15px;
+  background-color: #404040;
+}
+.com-telechargement .nav-section-main h1 {
+  font-size: 21px;
+  color: #FFFFFF;
+}
+.com-telechargement .nav-section-main ul {
+  list-style: none;
+  margin-top: 5px;
+}
+.com-telechargement .nav-section-main ul li {
+  cursor: pointer;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #808080;
+}
+.com-telechargement .nav-section-main ul li #removeFile {
+  display: none;
+  margin-left: 10px;
+  float: right;
+}
+.com-telechargement .nav-section-main ul li #removeCompletedFile {
+  display: none;
+  margin-left: 10px;
+  float: right;
+}
+.com-telechargement .nav-section-main ul li:hover {
+  color: #FF6600;
+}
+.com-telechargement .nav-section-main ul li:hover #removeFile {
+  color: #FFFFFF;
+  display: inline;
+}
+.com-telechargement .nav-section-main ul li:hover #removeCompletedFile {
+  color: #FF0000;
+  display: inline;
+}
+.com-telechargement .nav-section-main ul li.disabled {
+  cursor: default;
+}
+.com-telechargement .nav-section-main ul li.error {
+  color: #FF0000;
+}
+.com-telechargement .nav-section-main .scrollbar-dynamic {
+  min-height: calc(30vh) !important;
+  max-height: calc(30vh) !important;
+}
+.com-telechargement .nav-section-main.disponible {
+  background-color: #EEE;
+  color: #000000;
+}
+.com-telechargement .nav-section-main.disponible h1 {
+  color: #000000;
+}
+.com-telechargement .nav-section-main.disponible .scrollbar-dynamic {
+  min-height: calc(70vh - 78px) !important;
+  max-height: calc(70vh - 78px) !important;
+}
+.com-telechargement .nav-section-main.disponible .warning {
+  text-align: center;
+  padding: 15px;
+}
+.com-telechargement .nav-section-main.disponible .warning svg {
+  color: #808080;
+  font-size: 60px;
+  margin-bottom: 10px;
+}

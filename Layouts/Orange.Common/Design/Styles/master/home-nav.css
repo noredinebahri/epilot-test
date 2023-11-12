@@ -1,0 +1,125 @@
+﻿/************************************************************************************************************************************************
+                                                            TOP navigation (tuiles)
+************************************************************************************************************************************************/
+/************************************************************************************************************************************************
+                                                    Variables - Couleurs
+************************************************************************************************************************************************/
+/* Couleurs */
+/* Couleur module */
+/* PVV FICHE STATUS */
+/************************************************************************************************************************************************
+                                                    Variables - Fonts
+************************************************************************************************************************************************/
+/*Helvetica Neue,*/
+#home-nav {
+  margin: 100px;
+  margin-top: 30px;
+}
+#home-nav .home-tiles {
+  list-style-type: none;
+}
+#home-nav .home-tiles::before {
+  border-bottom: 25px solid #F2F2F2;
+  border-right: 25px solid transparent;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: -30px;
+  width: 0;
+}
+#home-nav .home-tiles li {
+  /*height: 100px;
+            width: 100px;
+            float: left;
+            margin: 3px;*/
+  padding: 5px;
+}
+#home-nav .home-tiles li a.navTile {
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+}
+#home-nav .home-tiles li a.navTile:visited {
+  color: inherit;
+}
+#home-nav .home-tiles li a.navTile .navTile-background {
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+#home-nav .home-tiles li a.navTile .navTile-background p {
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  line-height: normal;
+  font-size: 18px !important;
+}
+#home-nav .home-tiles li a.navTile .navTile-background p svg {
+  font-size: 30px;
+  width: 90px;
+  margin-bottom: 10px;
+}
+#home-nav .home-recherche-client .nav-section-main {
+  margin-top: 30px;
+}
+#home-nav .home-recherche-client .nav-section-main div div .recherche-client-toggle-view .toggle-view-left,
+#home-nav .home-recherche-client .nav-section-main div div .recherche-client-toggle-view .toggle-view-middle,
+#home-nav .home-recherche-client .nav-section-main div div .recherche-client-toggle-view .toggle-view-right {
+  font-size: 16px !important;
+}
+#home-nav .home-recherche-client .nav-section-main div div div .btn {
+  font-size: 16px !important;
+  border-radius: 10px;
+}
+#home-nav .home-recherche-client .popover {
+  min-width: 450px;
+}
+#home-nav .home-recherche-client .popover .popover-inner {
+  width: 450px;
+}
+#home-nav .home-recherche-client .popover .popover-inner .popover-content {
+  width: 450px;
+}
+#home-nav .home-favorites {
+  margin-top: 30px;
+}
+#home-nav .home-favorites ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+#home-nav .home-favorites ul li div {
+  background-color: #ff7900;
+  border-radius: 25px;
+  height: 80px;
+}
+#home-nav .home-favorites ul li div a span {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+}
+#home-nav .home-favorites ul li div a span svg {
+  font-size: 30px;
+  width: 90px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+#home-nav .home-favorites .green-background-color {
+  background-color: #50be87 !important;
+}
+#home-nav .home-favorites .orange-background-color {
+  background-color: #ff7900 !important;
+}
+#home-nav .home-favorites .blue-background-color {
+  background-color: #1c91c9 !important;
+}
+#home-nav .home-favorites .red-background-color {
+  background-color: red !important;
+}
+#home-nav .home-favorites .purple-background-color {
+  background-color: #a885d8 !important;
+}
+#home-nav .nav-home-title {
+  text-align: left;
+}

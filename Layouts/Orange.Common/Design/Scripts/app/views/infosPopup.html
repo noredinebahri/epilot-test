@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="modal-header" ng-if="vm.titleToShow">
+        <h4 class="modal-title" ng-bind="vm.titleToShow"></h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <div ng-if="vm.textToShow" ng-bind="vm.textToShow"></div>
+                <div ng-if="vm.htmlToShow" ng-bind-html="vm.htmlToShow"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a class="btn btn-orange-default" href="#" ng-click="$close('confirm')">OK</a>
+    </div>
+</div>

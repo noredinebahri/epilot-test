@@ -1,0 +1,112 @@
+﻿/************************************************************************************************************************************************
+                                                                Composant - Resultat import
+************************************************************************************************************************************************/
+
+@import "../../../../../../../Common\Orange.EPilot\Layouts\Orange.Common\Design\Styles\def-common-variable.less";
+
+.reportblocs {
+    margin-top: 20px;
+
+    .reportbloc {
+        background-color: #f2f2f2;
+        color: @colorBlack;
+        height: 200px;
+        margin-right: 10px;
+        overflow-y: auto;
+        padding: 10px;
+
+        ul {
+            list-style-type: square;
+            margin-bottom: 5px;
+            margin-left: -15px;
+            color: #fe6d0c;
+
+            li p {
+                color: @colorBlack;
+                font-weight: 500;
+                font-size: 0.9em;
+                line-height: 18px;
+
+
+                span {
+                    color: @colorOrangeDefault;
+                }
+            }
+        }
+    }
+}
+
+.popup-import {
+    padding: 0;
+
+    .section-import {
+        background-color: @colorGrey2;
+        color: @colorWhite;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        line-height: 30px;
+
+        h4 {
+            color: @colorWhite;
+        }
+
+
+        a, &a:visited {
+            color: @colorWhite !important;
+            height: 32px;
+        }
+
+        .file-selector {
+            padding: 0;
+
+            input[type="text"]:disabled {
+                background-color: @colorGrey2;
+                height: 32px;
+                border: 1px solid #ddd;
+            }
+
+            a {
+                height: 32px;
+            }
+        }
+    }
+
+    .section-resultats {
+
+        .count {
+            height: 60px;
+            /*line-height: 60px;*/
+            span {
+                font-size: 40px;
+            }
+
+            &.total {
+                color: @colorGrey2;
+                border-bottom: 5px solid @colorGrey2;
+                border-right: 5px solid @colorGrey2;
+            }
+
+            &.erreur {
+                color: @colorRed;
+                border-bottom: 5px solid @colorRed;
+                border-right: 5px solid @colorRed;
+            }
+
+            &.valid {
+                color: @colorGreen2;
+                border-bottom: 5px solid @colorGreen2;
+                border-right: 5px solid @colorGreen2;
+            }
+        }
+
+        td {
+            line-height: 1 !important;
+        }
+
+        .section-errors {
+            padding: 15px 30px 15px 30px;
+        }
+    }
+}
+
+
